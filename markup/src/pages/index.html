@@ -1,15 +1,95 @@
----
-layout: index
-meta-title: Index
----
+<!doctype html>
+<html class="no-js" lang="en">
 
-<div class="index-menu">
-  <ul class="menu vertical">
-    <li class="aos-init" data-aos="zoom-in-up" data-aos-delay="0"><a href="dashboard.html" target="_blank">Dashboard</a></li>
-    <li class="aos-init" data-aos="zoom-in-up" data-aos-delay="250"><a href="#" target="_blank">Page 2</a></li>
-    <li class="aos-init" data-aos="zoom-in-up" data-aos-delay="500"><a href="#" target="_blank">Page 3</a></li>
-    <li class="aos-init" data-aos="zoom-in-up" data-aos-delay="750"><a href="#" target="_blank">Page 4</a></li>
-    <li class="aos-init" data-aos="zoom-in-up" data-aos-delay="1000"><a href="#" target="_blank">Page 5</a></li>
-    <li class="aos-init" data-aos="zoom-in-up" data-aos-delay="1250"><a href="styleguide.html" target="_blank">Styleguide</a></li>
-  </ul>
-</div>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Markup</title>
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body>
+  <script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.18.13'><\/script>".replace("HOST", location.hostname));
+//]]></script>
+
+  <header>
+    <nav class="main-nav"></nav>
+  </header>
+
+  <main>
+    <h1 class="visually-hidden">Отзывы и контакты</h1>
+    <section class="reviews">
+      <h2 class="reviews__title">Отзывы</h2>
+      <ul class="reviews__list">
+        <li class="reviews__list-item">
+          <div class="reviews__image ">
+            <img src="" alt="">
+            <h3 class="reviews__name">Влад Гончаров</h3>
+            <a class="reviews__link" href="https://vk.com/ex3der">vk.com/ex3der</a>
+            <p class="reviews__text">Предсознательное иллюстрирует девиантный филогенез. Восприятие, на первый взгляд, отчуждает генезис. Филогенез, например, слабопроницаем. Действие притягивает депрессивный инсайт. </p>
+            <div class="reviews__rating"></div>
+          </div>
+        </li>
+        <li>
+          <div class="reviews__image ">
+            <img src="" alt="">
+            <h3 class="reviews__name">Ваня Мирошников</h3>
+            <a class="reviews__link" href="https://vk.com/id16362672">vk.com/id16362672</a>
+            <p class="reviews__text">Предсознательное иллюстрирует девиантный филогенез. Восприятие, на первый взгляд, отчуждает генезис. Филогенез, например, слабопроницаем. Действие притягивает депрессивный инсайт. </p>
+            <div class="reviews__rating"></div>
+          </div>
+        </li>
+        <li>
+          <div class="reviews__image ">
+            <img src="" alt="">
+            <h3 class="reviews__name">Алексей Волков</h3>
+            <a class="reviews__link" href="https://vk.com/asgalex">vk.com/asgalex</a>
+            <p class="reviews__text">Предсознательное иллюстрирует девиантный филогенез. Восприятие, на первый взгляд, отчуждает генезис. Филогенез, например, слабопроницаем. Действие притягивает депрессивный инсайт. </p>
+            <div class="reviews__rating"></div>
+          </div>
+        </li>
+      </ul>
+      <button class="reviews__arrow reviews__arrow--left"></button>
+      <button class="reviews__arrow reviews__arrow--right"></button>
+    </section>
+
+    <section class="contacts">
+      <h2 class="contacts__title">Контакты</h2>
+      <ul class="contacts__list">
+        <li class="contacts__list-item">
+          <h3 class="contacts__title">Телефон</h3>
+          <a class="contacts__text" href="tel:+79615027034">+79615027034</a>
+        </li>
+        <li class="contacts__list-item">
+          <h3 class="contacts__title">Адрес</h3>
+          Россия, г. Краснодар, ул. Карла Маркса 72, офис-367, третий этаж
+        </li>
+      </ul>
+      <div class="contacts__map"></div>
+    </section>
+    <section class="feedback">
+      <form class="feedback__form" action="" method="post">
+        <input class="feedback__input" type="text" name="name" id="name-field" placeholder="Ваше имя" autofocus>
+        <input class="feedback__input" type="tel" name="phone" id="phone-field" placeholder="Ваш телефон *" pattern="\+7\-[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          required>
+        <input class="feedback__input" type="email" name="email" id="email-field" placeholder="Ваш email *" required>
+        <textarea class="feedback__message" name="message" id="message" cols="30" rows="5" placeholder="Сообщение"></textarea>
+        <input class="feedback__checkbox" type="checkbox" name="agreement" id="agreement-field">
+        <label for="agreement-field">Согласен на обработку персональных данных</label>
+        <button>Прикрепить файл</button>
+        <button type="submit">Отправить</button>
+        <div class="feedback__footnote">
+          <small class="feedback__text">* обязательные для заполнения</small>
+          <small class="feedback__text">Макс. размер файла: 10 МБ</small>
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer></footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+
+</html>
