@@ -1,3 +1,7 @@
+.reviews__title {
+  @include font-set(36.01px, 25.01px, bold, #000000, center);
+}
+
 .reviews__list {
   @include list-reset;
 }
@@ -5,6 +9,26 @@
 .reviews__list-item {
   @include push-center;
   width: 360px;
+}
+
+.reviews__name {
+  @include font-set(20.01px, 21.98px, normal, #000000, center);
+}
+
+.reviews__link {
+  display: block;
+  @include font-set(16.01px, 21.98px, 300, #e46b7c, center);
+}
+
+.reviews__text {
+  @include font-set(16.01px, 21.95px, 300, #000000, center);
+  font-style: italic;
+}
+
+.reviews__image img {
+  display: block;
+  @include push-center;
+  @include avatar(81px, 81px, 50%);
 }
 
 @media (min-width: $desktop-width) {

@@ -16,36 +16,36 @@
         <ul class="reviews__list">
           <li class="reviews__list-item">
             <div class="reviews__image">
-              <img src="assets/img/user1.png"фото Влада Гончарова" width="81" height="81">
-              <h3 class="reviews__name">Влад Гончаров</h3>
-              <a class="reviews__link" href="https://vk.com/ex3der">vk.com/ex3der</a>
-              <p class="reviews__text">Предсознательное иллюстрирует девиантный филогенез. Восприятие, на первый
-                взгляд, отчуждает генезис. Филогенез, например, слабопроницаем. Действие притягивает депрессивный
-                инсайт. </p>
-              <div class="reviews__rating"></div>
+              <img src="assets/img/user1.png" фото Влада Гончарова" width="81" height="81">
             </div>
+            <h3 class="reviews__name">Влад Гончаров</h3>
+            <a class="reviews__link" href="https://vk.com/ex3der">vk.com/ex3der</a>
+            <p class="reviews__text">Предсознательное иллюстрирует девиантный филогенез. Восприятие, на первый
+              взгляд, отчуждает генезис. Филогенез, например, слабопроницаем. Действие притягивает депрессивный
+              инсайт. </p>
+            <div class="reviews__rating"></div>
           </li>
           <li class="reviews__list-item">
             <div class="reviews__image">
               <img src="assets/img/user2.png" alt="фото Вани Мирошникова" width="81" height="81">
-              <h3 class="reviews__name">Ваня Мирошников</h3>
-              <a class="reviews__link" href="https://vk.com/id16362672">vk.com/id16362672</a>
-              <p class="reviews__text">Предсознательное иллюстрирует девиантный филогенез. Восприятие, на первый
-                взгляд, отчуждает генезис. Филогенез, например, слабопроницаем. Действие притягивает депрессивный
-                инсайт. </p>
-              <div class="reviews__rating"></div>
             </div>
+            <h3 class="reviews__name">Ваня Мирошников</h3>
+            <a class="reviews__link" href="https://vk.com/id16362672">vk.com/id16362672</a>
+            <p class="reviews__text">Предсознательное иллюстрирует девиантный филогенез. Восприятие, на первый
+              взгляд, отчуждает генезис. Филогенез, например, слабопроницаем. Действие притягивает депрессивный
+              инсайт. </p>
+            <div class="reviews__rating"></div>
           </li>
           <li class="reviews__list-item">
             <div class="reviews__image">
               <img src="assets/img/user3.png" alt="фото Алексея Волкова" width="81" height="81">
-              <h3 class="reviews__name">Алексей Волков</h3>
-              <a class="reviews__link" href="https://vk.com/asgalex">vk.com/asgalex</a>
-              <p class="reviews__text">Предсознательное иллюстрирует девиантный филогенез. Восприятие, на первый
-                взгляд, отчуждает генезис. Филогенез, например, слабопроницаем. Действие притягивает депрессивный
-                инсайт. </p>
-              <div class="reviews__rating"></div>
             </div>
+            <h3 class="reviews__name">Алексей Волков</h3>
+            <a class="reviews__link" href="https://vk.com/asgalex">vk.com/asgalex</a>
+            <p class="reviews__text">Предсознательное иллюстрирует девиантный филогенез. Восприятие, на первый
+              взгляд, отчуждает генезис. Филогенез, например, слабопроницаем. Действие притягивает депрессивный
+              инсайт. </p>
+            <div class="reviews__rating"></div>
           </li>
         </ul>
         <button class="reviews__arrow reviews__arrow--left"></button>
@@ -53,7 +53,7 @@
       </section>
 
       <section class="contacts">
-        <h2 class="contacts__title">Контакты</h2>
+        <h2 class="contacts__main-title">Контакты</h2>
         <ul class="contacts__list">
           <li class="contacts__list-item">
             <h3 class="contacts__title">Телефон</h3>
@@ -61,7 +61,7 @@
           </li>
           <li class="contacts__list-item">
             <h3 class="contacts__title">Адрес</h3>
-            Россия, г. Краснодар, ул. Карла Маркса 72, офис-367, третий этаж
+            <p class="contacts__address">Россия, г. Краснодар, ул. Карла Маркса 72, офис-367, третий этаж</p>
           </li>
         </ul>
         <div class="contacts__map map_canvas">
@@ -75,8 +75,10 @@
             required>
           <input class="feedback__input" type="email" name="email" id="email-field" placeholder="Ваш email *" required>
           <textarea class="feedback__message" name="message" id="message" cols="30" rows="5" placeholder="Сообщение"></textarea>
-          <input class="feedback__checkbox" type="checkbox" name="agreement" id="agreement-field">
-          <label for="agreement-field">Согласен на обработку персональных данных</label>
+          <label for="agreement-field">
+            <input class="feedback__checkbox" type="checkbox" name="agreement" id="agreement-field">Согласен
+            на обработку персональных данных
+          </label>
           <button>Прикрепить файл</button>
           <button type="submit">Отправить</button>
           <div class="feedback__footnote">

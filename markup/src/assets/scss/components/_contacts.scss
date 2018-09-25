@@ -1,0 +1,19 @@
+.contacts__main-title {
+  @include font-set(36px, 25px, bold, #000000, left);
+}
+
+.contacts__title {
+  @include font-set(27.24px, 28.39px, bold, #000000, left);
+}
+
+.contacts__address {
+  @include font-set(18.19px, 28.44px, normal, #000000, left);
+}
+
+.contacts__list {
+  @include list-reset;
+}
+
+.contacts__text {
+  @include font-set(18.16px, 28.39px, normal, #000000, left);
+}
