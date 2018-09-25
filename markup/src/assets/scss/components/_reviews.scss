@@ -1,0 +1,14 @@
+.reviews__list {
+  @include list-reset;
+}
+
+.reviews__list-item {
+  @include push-center;
+  width: 360px;
+}
+
+@media (min-width: $desktop-width) {
+  .reviews__list-item {
+    width: 380px;
+  }
+}

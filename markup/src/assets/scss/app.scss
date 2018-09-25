@@ -62,16 +62,20 @@
 @import 'mixins/flex';
 @import 'mixins/avatar';
 @import 'mixins/helpers';
+@import 'mixins/lists';
 @import 'mixins/psuedo';
 @import 'mixins/push-center';
 @import 'mixins/sidelines';
 @import 'mixins/zindex';
 
 // global styles
-@import 'global/app-dashboard';
 @import 'global/layout';
 
 // custom components
 @import 'components/navigation/main-nav';
-
+@import 'components/container';
+@import 'components/header';
+@import 'components/reviews';
+@import 'components/contacts';
+@import 'components/feedback';
 @import 'components/footer';

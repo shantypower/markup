@@ -1,14 +1,3 @@
-<!doctype html>
-<html class="no-js" lang="en">
-
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Markup</title>
-  <link rel="stylesheet" href="assets/css/app.css">
-</head>
-
 <body>
   <script id="__bs_script__">//<![CDATA[
     document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.18.13'><\/script>".replace("HOST", location.hostname));
@@ -18,15 +7,16 @@
     <nav class="main-nav"></nav>
   </header>
 
-  <div class="wrapper">
+  <div class="container">
     <main>
       <h1 class="visually-hidden">Отзывы и контакты</h1>
+      <header class="header"></header>
       <section class="reviews">
         <h2 class="reviews__title">Отзывы</h2>
         <ul class="reviews__list">
           <li class="reviews__list-item">
-            <div class="reviews__image ">
-              <img src="assets/img/user1.png"фото Влада Гончарова">
+            <div class="reviews__image">
+              <img src="assets/img/user1.png"фото Влада Гончарова" width="81" height="81">
               <h3 class="reviews__name">Влад Гончаров</h3>
               <a class="reviews__link" href="https://vk.com/ex3der">vk.com/ex3der</a>
               <p class="reviews__text">Предсознательное иллюстрирует девиантный филогенез. Восприятие, на первый
@@ -35,9 +25,9 @@
               <div class="reviews__rating"></div>
             </div>
           </li>
-          <li>
-            <div class="reviews__image ">
-              <img src="assets/img/user2.png" alt="фото Вани Мирошникова">
+          <li class="reviews__list-item">
+            <div class="reviews__image">
+              <img src="assets/img/user2.png" alt="фото Вани Мирошникова" width="81" height="81">
               <h3 class="reviews__name">Ваня Мирошников</h3>
               <a class="reviews__link" href="https://vk.com/id16362672">vk.com/id16362672</a>
               <p class="reviews__text">Предсознательное иллюстрирует девиантный филогенез. Восприятие, на первый
@@ -46,9 +36,9 @@
               <div class="reviews__rating"></div>
             </div>
           </li>
-          <li>
-            <div class="reviews__image ">
-              <img src="assets/img/user3.png" alt="фото Алексея Волкова">
+          <li class="reviews__list-item">
+            <div class="reviews__image">
+              <img src="assets/img/user3.png" alt="фото Алексея Волкова" width="81" height="81">
               <h3 class="reviews__name">Алексей Волков</h3>
               <a class="reviews__link" href="https://vk.com/asgalex">vk.com/asgalex</a>
               <p class="reviews__text">Предсознательное иллюстрирует девиантный филогенез. Восприятие, на первый
@@ -74,7 +64,7 @@
             Россия, г. Краснодар, ул. Карла Маркса 72, офис-367, третий этаж
           </li>
         </ul>
-        <div class="contacts__map">
+        <div class="contacts__map map_canvas">
           <img src="assets/img/map-mobile.png" alt="Адрес: Россия, г. Краснодар, ул. Карла Маркса 72, офис-367, третий этаж">
         </div>
       </section>
@@ -98,9 +88,4 @@
     </main>
     <footer></footer>
   </div>
-
-
-  <script src="assets/js/app.js"></script>
 </body>
-
-</html>
