@@ -1,8 +1,13 @@
+.contacts {
+  margin-bottom: 60px;
+}
 .contacts__main-title {
+  margin-bottom: 45px;
   @include font-set(36px, 25px, bold, #000000, left);
 }
 
 .contacts__title {
+  margin-bottom: 20px;
   @include font-set(27.24px, 28.39px, bold, #000000, left);
 }
 
@@ -14,6 +19,17 @@
   @include list-reset;
 }
 
+.contacts__list-item {
+  margin-bottom: 40px;
+}
+
 .contacts__text {
   @include font-set(18.16px, 28.39px, normal, #000000, left);
+}
+
+.contacts__map img {
+  display: block;
+  width: 425px;
+  height: 390px;
+  box-shadow: 10px 10px 30px 10px #ffedef;
 }

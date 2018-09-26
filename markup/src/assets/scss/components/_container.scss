@@ -6,8 +6,9 @@
     background-color: #fff0ed;
   }
 
-  .container__wrapper {
-    background-color: $white;
+.container__wrapper {
+  padding: 0 25px;
+  background-color: $white;
   }
   
   @media (min-width: $desktop-width) {
