@@ -1,14 +1,15 @@
 .container {
     box-sizing: border-box;
-    width: 500px;
-    padding: 10px;
+    width: 320px;
+    padding: 12px;
     margin: 0 auto;
     background-color: #fff0ed;
   }
 
 .container__wrapper {
   position: relative;
-  padding: 15px 25px;
+  padding: 65px 20px;
+  padding-bottom: 18px;
   background-color: $white;
   }
   
