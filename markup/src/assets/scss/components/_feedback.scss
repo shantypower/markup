@@ -1,3 +1,6 @@
+.feedback {
+  position: relative;
+}
 .feedback__input {
   box-sizing: border-box;
   padding: 10px 0;
@@ -19,6 +22,7 @@
   border: 0px;
   border-bottom: 2px solid #000000;
   box-shadow: none;
+  resize: none;
 }
 
 .feedback__input::-webkit-input-placeholder,
@@ -35,6 +39,7 @@
 }
 
 .feedback__label {
+  order: 1;
   position: relative;
   padding-left: 35px;
   margin-bottom: 30px;
@@ -67,6 +72,7 @@
 
 .feedback__form {
   @include flex-centerer(vertical);
+  background-color: #ffffff;
 }
 
 .feedback__btn {
@@ -79,6 +85,7 @@
 
 .feedback__btn--affix {
   position: relative;
+  order: 2;
   padding-left: 15px;
   border: 1px dashed #000000;
   border-radius: 8px;
@@ -94,6 +101,7 @@
 }
 
 .feedback__btn--send {
+  order: 3;
   align-self: stretch;
   background-color: #f17f8f;
   font-size: 18px;
@@ -102,6 +110,7 @@
 
 .feedback__footnote {
   align-self: stretch;
+  order: 4;
   @include flex-middle-justify;
 
   margin-bottom: 30px;
@@ -110,4 +119,48 @@
 
 .feedback__text {
   @include font-set(12.13px, 24.25px, 700, #000000);
+}
+
+@media (min-width: $desktop-width) {
+  .feedback {
+    min-height: 482px;
+  }
+
+  .feedback__form {
+    padding: 50px 50px;
+    @include push-center;
+    width: 724px;
+    min-height: 520px;
+    box-shadow: 10px 10px 30px 10px #ffedef;
+  }
+
+  .feedback__btn--affix {
+    position: absolute;
+    top: 208px;
+    left: 150px;
+    order: 1;
+    width: 282px;
+
+    &::before {
+      left: 30px;
+    }
+  }
+
+  .feedback__label {
+    order: 2;
+  }
+
+  .feedback__input-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 624px;
+  }
+
+  .feedback__input,
+  .feedback__message {
+    width: 282px;
+    margin-right: 30px; 
+  }
 }

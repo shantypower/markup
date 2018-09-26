@@ -33,3 +33,9 @@
   height: 390px;
   box-shadow: 10px 10px 30px 10px #ffedef;
 }
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    display: none;
+  }
+}
