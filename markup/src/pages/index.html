@@ -57,17 +57,16 @@
             <input class="feedback__input" type="text" name="name" id="name-field" placeholder="Ваше имя" autofocus>
             <input class="feedback__input feedback__input--phone" type="tel" name="phone" id="phone-field" pattern="\+7\-[0-9]{3}-[0-9]{3}-[0-9]{4}"
               required>
-              <label class="feedback__placeholder feedback__placeholder--phone" for="phone-field">Ваш телефон <span>*</span></label>
+            <label class="feedback__placeholder feedback__placeholder--phone" for="phone-field">Ваш телефон <span>*</span></label>
             <input class="feedback__input feedback__input--email" type="email" name="email" id="email-field" required>
-              <label class="feedback__placeholder feedback__placeholder--email" for="email-field">Ваш email <span>*</span></label>
+            <label class="feedback__placeholder feedback__placeholder--email" for="email-field">Ваш e-mail <span>*</span></label>
             <textarea class="feedback__message" name="message" id="message" cols="30" rows="4" placeholder="Сообщение"></textarea>
           </div>
-          <label class="feedback__label" for="agreement-field">
-            <input class="feedback__checkbox visually-hidden" type="checkbox" name="agreement" id="agreement-field">Согласен
-            на обработку персональных <br>данных
-          </label>
-          <button class="feedback__btn feedback__btn--affix" type="file">П&#8381;ик&#8381;епить файл</button>
-          <button class="feedback__btn feedback__btn--send" type="submit">Отп&#8381;авить</button>
+          <label class="feedback__label" for="agreement-field">Согласен
+            на обработку персональных <br>данных</label>
+          <input class="feedback__checkbox visually-hidden" type="checkbox" name="agreement" id="agreement-field">
+          <button class="feedback__btn feedback__btn--affix" type="file">Прикрепить файл</button>
+          <button class="feedback__btn feedback__btn--send" type="submit">Отправить</button>
           <div class="feedback__footnote">
             <small class="feedback__text">* обязательные для заполнения</small>
             <small class="feedback__text">Макс. размер файла: 10 МБ</small>

@@ -25,7 +25,7 @@
   @include font-set(18px, 25px, bold, #000000, left);
   outline: none;
   border: 0px;
-  border-bottom: 2px solid #000000;
+  border-bottom: 1px solid #000000;
   box-shadow: none;
   resize: none;
 }
@@ -96,7 +96,7 @@
   border-radius: 2px;
 }
 
-.feedback__checkbox:checked + .feedback__label::after {
+.feedback__checkbox:checked + .feedback__label::after{
   @include pseudo;
   top: 0;
   left: 0;
@@ -164,7 +164,8 @@
   }
 
   .feedback__form {
-    padding: 50px 50px;
+    padding: 47px 68px;
+    padding-bottom: 23px;
     @include push-center;
     width: 724px;
     min-height: 520px;
@@ -173,18 +174,40 @@
 
   .feedback__btn--affix {
     position: absolute;
-    top: 208px;
-    left: 150px;
+    top: 213px;
+    left: 172px;
     order: 1;
-    width: 282px;
+    width: 277px;
 
     &::before {
-      left: 30px;
+      left: 27px;
     }
+  }
+
+  .feedback__btn--send {
+    margin-bottom: 24px;
   }
 
   .feedback__label {
     order: 2;
+    margin-bottom: 33px;
+    width: 100%;;
+    font-size: 19.2px;
+    line-height: 23.99px;
+    font-weight: 700;
+
+    br {
+      display: none;
+    }
+
+    &::before {
+      top: 0px;
+    }
+  }
+
+  .feedback__input {
+    margin-bottom: 53px;
+    padding: 18px 0;
   }
 
   .feedback__input-group {
@@ -192,12 +215,45 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-    width: 624px;
+    margin-bottom: 31px;
+    width: 588px;
+
+    .feedback__message {
+      height: 141px;
+    }
   }
 
-  .feedback__input,
+  .feedback__input {
+    width: 262px;
+    height: 36px;
+  }
+
   .feedback__message {
-    width: 282px;
-    margin-right: 30px; 
+    width: 262px;
+  }
+
+  .feedback__message::-webkit-input-placeholder {
+    padding-top: 0;
+  }
+
+  .feedback__input:not(:nth-last-of-type(2n)) {
+    margin-right: 60px; 
+  }
+
+  .feedback__placeholder--phone {
+    top: 53px;
+    left: 494px;
+  }
+
+  .feedback__placeholder--email {
+    left: 172px;
+    top: 144px;
+  }
+
+  .feedback__footnote {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 0;
   }
 }
