@@ -22,11 +22,7 @@
 
 .reviews__list-item {
   width: 260px;
-
-  &:nth-child(2),
-  &:nth-child(3) {
-    display: none;
-  };
+ display: none;
 }
 
 .reviews__name {
@@ -91,6 +87,14 @@
   &:first-child {
     opacity: 1;
   }
+}
+
+.showing {
+  display: block;
+}
+
+.hide {
+  display: none;
 }
 
 @media (min-width: $desktop-width) {
