@@ -60,18 +60,20 @@
 // mixins
 @import 'mixins/container-border';
 @import 'mixins/flex';
+@import 'mixins/fonts';
 @import 'mixins/avatar';
 @import 'mixins/helpers';
+@import 'mixins/lists';
 @import 'mixins/psuedo';
 @import 'mixins/push-center';
 @import 'mixins/sidelines';
 @import 'mixins/zindex';
 
 // global styles
-@import 'global/app-dashboard';
 @import 'global/layout';
 
 // custom components
 @import 'components/navigation/main-nav';
-
-@import 'components/footer';
+@import 'components/container';
+@import 'components/reviews';
+@import 'components/feedback';

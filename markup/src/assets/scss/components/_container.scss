@@ -1,0 +1,25 @@
+.container {
+    box-sizing: border-box;
+    width: 320px;
+    padding: 12px;
+    margin: 0 auto;
+    background-color: #fff0ed;
+  }
+
+.container__wrapper {
+  position: relative;
+  padding: 8px 20px;
+  padding-bottom: 18px;
+  background-color: $white;
+  }
+  
+  @media (min-width: $desktop-width) {
+    .container {
+      width: 1024px;
+      padding: 26px;
+    }
+
+    .container__wrapper {
+      padding-bottom: 118px;
+    }
+  }

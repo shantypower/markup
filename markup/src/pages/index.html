@@ -1,15 +1,71 @@
----
-layout: index
-meta-title: Index
----
+<body>
+  <script id="__bs_script__">//<![CDATA[document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.18.13'><\/script>".replace("HOST", location.hostname));
+//]]></script>
 
-<div class="index-menu">
-  <ul class="menu vertical">
-    <li class="aos-init" data-aos="zoom-in-up" data-aos-delay="0"><a href="dashboard.html" target="_blank">Dashboard</a></li>
-    <li class="aos-init" data-aos="zoom-in-up" data-aos-delay="250"><a href="#" target="_blank">Page 2</a></li>
-    <li class="aos-init" data-aos="zoom-in-up" data-aos-delay="500"><a href="#" target="_blank">Page 3</a></li>
-    <li class="aos-init" data-aos="zoom-in-up" data-aos-delay="750"><a href="#" target="_blank">Page 4</a></li>
-    <li class="aos-init" data-aos="zoom-in-up" data-aos-delay="1000"><a href="#" target="_blank">Page 5</a></li>
-    <li class="aos-init" data-aos="zoom-in-up" data-aos-delay="1250"><a href="styleguide.html" target="_blank">Styleguide</a></li>
-  </ul>
-</div>
+  <div class="container">
+    <main class="container__wrapper">
+      <h1 class="visually-hidden">Отзывы и контакты</h1>
+      <section class="reviews">
+        <h2 class="reviews__title">Отзывы</h2>
+        <ul class="reviews__list">
+          <li class="reviews__list-item showing">
+            <div class="reviews__image">
+              <img src="assets/img/user1.png" alt="фото Влада Гончарова" width="81" height="81">
+            </div>
+            <h3 class="reviews__name">Влад Гончаров</h3>
+            <a class="reviews__link" href="https://vk.com/ex3der">vk.com/ex3der</a>
+            <p class="reviews__text">Предсознательное иллюстрирует девиантный филогенез. Восприятие, на первый
+              взгляд, отчуждает генезис. Филогенез, например, слабопроницаем. Действие притягивает депрессивный
+              инсайт.</p>
+          </li>
+          <li class="reviews__list-item reviews__list-item--nojs">
+            <div class="reviews__image">
+              <img src="assets/img/user2.png" alt="фото Вани Мирошникова" width="81" height="81">
+            </div>
+            <h3 class="reviews__name">Ваня Мирошников</h3>
+            <a class="reviews__link" href="https://vk.com/id16362672">vk.com/id16362672</a>
+            <p class="reviews__text">Предсознательное иллюстрирует девиантный филогенез. Восприятие, на первый
+              взгляд, отчуждает генезис. Филогенез, например, слабопроницаем. Действие притягивает депрессивный
+              инсайт.</p>
+          </li>
+          <li class="reviews__list-item reviews__list-item--nojs">
+            <div class="reviews__image">
+              <img src="assets/img/user3.png" alt="фото Алексея Волкова" width="81" height="81">
+            </div>
+            <h3 class="reviews__name">Алексей Волков</h3>
+            <a class="reviews__link" href="https://vk.com/asgalex">vk.com/asgalex</a>
+            <p class="reviews__text">Предсознательное иллюстрирует девиантный филогенез. Восприятие, на первый
+              взгляд, отчуждает генезис. Филогенез, например, слабопроницаем. Действие притягивает депрессивный
+              инсайт.</p>
+          </li>
+        </ul>
+        <button class="reviews__arrow reviews__arrow--left"></button>
+        <button class="reviews__arrow reviews__arrow--right"></button>
+      </section>
+
+      <section class="feedback">
+        <form class="feedback__form" action="" method="post" enctype="multipart/form-data">
+          <div class="feedback__input-group">
+            <input class="feedback__input" type="text" name="name" id="name-field" placeholder="Ваше имя" autofocus>
+            <input class="feedback__input feedback__input--phone" type="tel" name="phone" id="phone-field" pattern="\+7\-[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              required>
+            <label class="feedback__placeholder feedback__placeholder--phone" for="phone-field">Ваш телефон <span>*</span></label>
+            <input class="feedback__input feedback__input--email" type="email" name="email" id="email-field" required>
+            <label class="feedback__placeholder feedback__placeholder--email" for="email-field">Ваш e-mail <span>*</span></label>
+            <textarea class="feedback__message" name="message" id="message" cols="30" rows="4" placeholder="Сообщение"></textarea>
+          </div>
+          <label class="feedback__label" for="agreement-field">Согласен
+            на обработку персональных <br>данных</label>
+          <input class="feedback__checkbox visually-hidden" type="checkbox" name="agreement" id="agreement-field">
+          <button class="feedback__btn feedback__btn--affix" type="file">Прикрепить файл</button>
+          <button class="feedback__btn feedback__btn--send" type="submit">Отправить</button>
+          <div class="feedback__footnote">
+            <small class="feedback__text">* обязательные для заполнения</small>
+            <small class="feedback__text">Макс. размер файла: 10 МБ</small>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer></footer>
+  </div>
+</body>
