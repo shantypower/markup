@@ -22,7 +22,7 @@
 
 .reviews__list-item {
   width: 260px;
- display: none;
+  display: none;
 }
 
 .reviews__name {
@@ -141,6 +141,10 @@
     &:nth-child(3) {
       display: block;
     };
+  }
+
+  .reviews__list-item--nojs {
+    display: block;
   }
 
   .reviews__arrow {
