@@ -13,7 +13,7 @@
               <img src="assets/img/user1.png" alt="фото Влада Гончарова" width="81" height="81">
             </div>
             <h3 class="reviews__name">Влад Гончаров</h3>
-            <a class="reviews__link" href="https://vk.com/ex3der">vk.com/ex3der</a>
+            <a class="reviews__link" href="https://vk.com/ex3der" target="_blank">vk.com/ex3der</a>
             <p class="reviews__text">Предсознательное иллюстрирует девиантный филогенез. Восприятие, на первый
               взгляд, отчуждает генезис. Филогенез, например, слабопроницаем. Действие притягивает депрессивный
               инсайт.</p>
@@ -23,7 +23,7 @@
               <img src="assets/img/user2.png" alt="фото Вани Мирошникова" width="81" height="81">
             </div>
             <h3 class="reviews__name">Ваня Мирошников</h3>
-            <a class="reviews__link" href="https://vk.com/id16362672">vk.com/id16362672</a>
+            <a class="reviews__link" href="https://vk.com/id16362672" target="_blank">vk.com/id16362672</a>
             <p class="reviews__text">Предсознательное иллюстрирует девиантный филогенез. Восприятие, на первый
               взгляд, отчуждает генезис. Филогенез, например, слабопроницаем. Действие притягивает депрессивный
               инсайт.</p>
@@ -33,7 +33,7 @@
               <img src="assets/img/user3.png" alt="фото Алексея Волкова" width="81" height="81">
             </div>
             <h3 class="reviews__name">Алексей Волков</h3>
-            <a class="reviews__link" href="https://vk.com/asgalex">vk.com/asgalex</a>
+            <a class="reviews__link" href="https://vk.com/asgalex" target="_blank">vk.com/asgalex</a>
             <p class="reviews__text">Предсознательное иллюстрирует девиантный филогенез. Восприятие, на первый
               взгляд, отчуждает генезис. Филогенез, например, слабопроницаем. Действие притягивает депрессивный
               инсайт.</p>
@@ -46,13 +46,14 @@
       <section class="feedback">
         <form class="feedback__form" action="" method="post" enctype="multipart/form-data">
           <div class="feedback__input-group">
-            <input class="feedback__input" type="text" name="name" id="name-field" placeholder="Ваше имя" min="2"
-              autofocus>
-            <input class="feedback__input feedback__input--phone" type="tel" name="phone" id="phone-field" title="Пример ввода 7(999)999-999-99-99"
-              value="" maxlength='15' pattern="7\[0-9]{3}\[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
-            <label class="feedback__placeholder feedback__placeholder--phone" for="phone-field">Ваш телефон <span>*</span></label>
-            <input class="feedback__input feedback__input--email" type="email" name="email" id="email-field" required>
-            <label class="feedback__placeholder feedback__placeholder--email" for="email-field">Ваш e-mail <span>*</span></label>
+            <input class="feedback__input" type="text" name="name" id="name-field" placeholder="Ваше имя" minlength="2">
+            <input class="feedback__input feedback__input--phone" type="tel" name="phone" id="phone-field" placeholder="Ваш телефон"
+              title="Пример ввода 7(999)999-999-99-99" maxlength='15' pattern="7\[0-9]{3}\[0-9]{3}-[0-9]{2}-[0-9]{2}"
+              required aria-required="true">
+            <label class="feedback__placeholder feedback__placeholder--phone" for="phone-field"><span>*</span></label>
+            <input class="feedback__input feedback__input--email" type="email" name="email" id="email-field"
+              placeholder="Ваш e-mail" required aria-required="true">
+            <label class="feedback__placeholder feedback__placeholder--email" for="email-field"><span>*</span></label>
             <textarea class="feedback__message" name="message" id="message" cols="30" rows="4" placeholder="Сообщение"></textarea>
           </div>
           <label class="feedback__label" for="agreement-field">Согласен
