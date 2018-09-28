@@ -47,8 +47,9 @@
   top: 77px;
 }
 
-.feedback__input--phone:focus + .feedback__placeholder--phone {
-  display: none;
+.feedback__input--phone:focus + .feedback__placeholder--phone,
+.feedback__input--phone:active + .feedback__placeholder--phone {
+  opacity: 0;
 }
 
 .feedback__placeholder--email {
@@ -56,7 +57,7 @@
 }
 
 .feedback__input--email:focus + .feedback__placeholder--email {
-  display: none;
+  opacity: 0;
 }
 
 
@@ -119,7 +120,9 @@
 }
 
 .feedback__btn--affix {
+  display: block;
   position: relative;
+  width: 100%;
   order: 2;
   padding-left: 36px;
   border: 1px dashed #000000;
@@ -135,10 +138,15 @@
   }
 }
 
+.feedback__upload {
+  display: none;
+}
+
 .feedback__btn--send {
   order: 3;
   align-self: stretch;
   padding: 18px 5px;
+  margin-top: 17px;
   margin-bottom: 15px;
   background-color: #f17f8f;
   font-size: 18px;
