@@ -5,16 +5,14 @@ $(document).ready(function () {
     mobileFirst: true,
     prevArrow: ".reviews__arrow--left",
     nextArrow: ".reviews__arrow--right",
-responsive: [
+    responsive: [
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
-          mobileFirst: false,
-          infinite: true
+          mobileFirst: false
         }
       }]
-
   });
 });

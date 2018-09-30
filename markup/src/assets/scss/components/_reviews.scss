@@ -16,13 +16,14 @@
 
 .reviews__list {
   @include list-reset;
-  display: flex;
-  flex-direction: row;
+  display: block;
+  width: 100%;
+  overflow: hidden;
 }
 
 .reviews__list-item {
-  width: 260px;
-  display: none;
+  flex-basis: 260px;
+  flex-shrink: 0;
 }
 
 .reviews__name {
@@ -89,14 +90,6 @@
   }
 }
 
-.showing {
-  display: block;
-}
-
-.hide {
-  display: none;
-}
-
 @media (min-width: $desktop-width) {
   .reviews {
     margin-bottom: 168px;
@@ -131,20 +124,13 @@
   }
 
   .reviews__list {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 788px;
   }
   .reviews__list-item {
     width: 248px;
-    &:nth-child(2),
-    &:nth-child(3) {
-      display: block;
-    };
-  }
-
-  .reviews__list-item--nojs {
-    display: block;
   }
 
   .reviews__arrow {
