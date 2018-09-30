@@ -8,14 +8,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{meta-title}} Markup</title>
   <link rel="stylesheet" href="{{root}}assets/css/app.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js" type="text/ javascript"></script>
-  <link rel="stylesheet" href="css/validationEngine.jquery.css">
-  <script src="{{root}}assets/js/jquery.validationEngine.js"></script>
-  <script src="{{root}}assets/js/jquery.validationEngine-ru.js"></script>
+  <link rel="stylesheet" href="assets/css/validationEngine.jquery.css">
+
 </head>
 
 {{> body}}
 
 <script src="{{root}}assets/js/app.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js" type="text/javascript"></script>
+  <script src="assets/js/jquery.validationEngine-ru.js"></script>
+  <script src="assets/js/jquery.validationEngine.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#form").validationEngine('attach', {promptPosition : "centerRight", scroll: false});
+    });
+  </script>
 
 </html>
