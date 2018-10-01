@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $('.reviews__list').slick({
+  $('.reviews__list').not('.slick-initialized').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     mobileFirst: true,
@@ -14,5 +14,9 @@ $(document).ready(function () {
           mobileFirst: false
         }
       }]
+  });
+
+  $(document).ready(function () {
+    $("#form").validationEngine('attach', { promptPosition: "centerRight", scroll: false });
   });
 });
