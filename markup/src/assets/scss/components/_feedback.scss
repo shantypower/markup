@@ -6,10 +6,10 @@
   box-sizing: border-box;
   padding: 10px 0;
   margin-bottom: 30px;
-  @include font-set(18px, 25px, bold, #000000, left);
+  @include font-set(18px, 25px, bold, $black, left);
   outline: none;
   border: 0px solid transparent;
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid $black;
   box-shadow: none;
 
   &:last-of-type {
@@ -18,15 +18,15 @@
 }
 
 .feedback__input-group {
-  margin-bottom: 15px;
+  margin-bottom: 32px;
 }
 
 .feedback__message {
   padding-left: 0;
-  @include font-set(18px, 25px, bold, #000000, left);
+  @include font-set(18px, 25px, bold, $black, left);
   outline: none;
   border: 0px;
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid $black;
   box-shadow: none;
   resize: none;
 }
@@ -34,12 +34,12 @@
 .feedback__placeholder {
   position: absolute;
   top: -58px;
-  @include font-set(18px, 25px, bold, #000000, left);
+  @include font-set(18px, 25px, bold, $black, left);
 
   span {
     font-size: 18px;
     font-weight: bold;
-    color: #ff0725;
+    color: $red;
   }
 }
 
@@ -61,48 +61,54 @@
 }
 
 .feedback__input::-webkit-input-placeholder {
-  color: #000000;
+  color: $black;
 }
 
 .feedback__input::-moz-placeholder {
-  color: #000000;
+  color: $black;
   opacity: 1;
 }
 
 .feedback__input:-moz-placeholder {
-  color: #000000;
+  color: $black;
   opacity: 1;
 }
 
 .feedback__input:-ms-input-placeholder {
-  color: #000000;
+  color: $black;
   opacity: 1;
 }
 
 .feedback__input::-ms-input-placeholder {
-  color: #000000;
+  color: $black;
   opacity: 1;
 }
 
 .feedback__input::-moz-placeholder {
-  color: #000000;
+  color: $black;
   opacity: 1;
 }
 
 .feedback__message::-webkit-input-placeholder {
   padding: 30px 0;
-  color: #000000;
+  color: $black;
 }
 
 .feedback__message:-ms-input-placeholder {
-  color: #000000 !important;
+  color: $black !important;
   opacity: 1 !important;
 }
 
-.feedback__label {
+.feedback__message::-moz-placeholder {
+  color: $black;
+  opacity: 1;
+}
+
+.feedback .feedback__label {
   order: 1;
   position: relative;
   padding-left: 35px;
+  margin-left: 0;
   margin-bottom: 16px;
   width: 100%;
   font-weight: 600;
@@ -110,39 +116,42 @@
   line-height: 20.01px;
   font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
   text-align: left;
-  color: #000000;
+  color: $black;
 }
 
-.feedback__label::before {
+ .feedback__label::before {
   @include pseudo;
   top: 2px;
   left: 0;
   width: 24px;
   height: 24px;
-  border: 1px solid #000000;
+  border: 1px solid $black;
   border-radius: 2px;
 }
-// Это правило ДОЛЖНО работать, но оно ломает псевдоэлемент ::after!!!
-.feedback .feedback_checkbox:checked + .feedback__label::after {
+
+.feedback__label::after {
   @include pseudo;
   top: 0;
   left: 0;
-  width: 19px;
-  height: 19px;
-  background: url("/assets/img/checkmark.svg") no-repeat center;
+  width: 24px;
+  height: 24px;
+}
+
+.feedback__checkbox:checked + .feedback__label::after {
+  background: url("../img/checkmark.svg") no-repeat center;
 }
 
 
 .feedback__form {
-  @include flex-centerer(vertical);
-  background-color: #ffffff;
+  display: block;
+  background-color: $white;
 }
 
 .feedback__btn {
   box-sizing: border-box;
   padding: 19px 5px;
   margin-bottom: 17px;
-  @include font-set(16px, 25px, bold, #000000, center);
+  @include font-set(16px, 25px, bold, $black, center);
   text-transform: uppercase;
 }
 
@@ -152,7 +161,7 @@
   width: 100%;
   order: 2;
   padding-left: 36px;
-  border: 1px dashed #000000;
+  border: 1px dashed $black;
   border-radius: 8px;
 
   &:before {
@@ -161,7 +170,7 @@
     left: 19px;
     width: 30px;
     height: 26px;
-    background: url("/assets/img/clip.png") no-repeat center;
+    background: url("../img/clip.png") no-repeat center;
   }
 }
 
@@ -171,14 +180,15 @@
 
 .feedback__btn--send {
   box-sizing: border-box;
+  width: 100%;
   order: 3;
   align-self: stretch;
   padding: 18px 5px;
-  margin-top: 17px;
+  margin-top: 0;
   margin-bottom: 15px;
   background-color: #f17f8f;
-  font-size: 18px;
-  color: #ffffff;
+  font-size: 17px;
+  color: $white;
 }
 
 .feedback__footnote {
@@ -191,7 +201,7 @@
 .feedback__text {
   display: block;
   margin-bottom: 8px;
-  @include font-set(12.53px, 24.26px, 700, #000000, center);
+  @include font-set(12.53px, 24.26px, 700, $black, center);
 }
 
 @media (min-width: $desktop-width) {
@@ -201,6 +211,7 @@
 
   .feedback__form {
     padding: 47px 68px;
+    padding-top: 45px;
     padding-bottom: 23px;
     @include push-center;
     width: 724px;
@@ -208,8 +219,10 @@
     box-shadow: 10px 10px 30px 10px #ffedef;
   }
 
-  .feedback__btn--affix {
+  .feedback__btn.feedback__btn--affix {
     position: absolute;
+    margin-left: 0;
+    margin-right: 0;
     top: 213px;
     left: 172px;
     order: 1;
@@ -221,14 +234,15 @@
   }
 
   .feedback__btn--send {
+    margin-top: 19px;
     margin-bottom: 24px;
   }
 
-  .feedback__label {
+  .feedback .feedback__label {
     order: 2;
-    margin-bottom: 33px;
+    margin-bottom: 15px;
     width: 100%;;
-    font-size: 19.2px;
+    font-size: 18.99px;
     line-height: 23.99px;
     font-weight: 700;
 
@@ -242,8 +256,7 @@
   }
 
   .feedback__input {
-    margin-bottom: 53px;
-    padding: 18px 0;
+    margin-bottom: 51px;
   }
 
   .feedback__input-group {
@@ -261,7 +274,6 @@
 
   .feedback__input {
     width: 262px;
-    height: 36px;
   }
 
   .feedback__message {
