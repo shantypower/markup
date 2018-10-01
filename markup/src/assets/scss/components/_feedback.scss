@@ -133,12 +133,12 @@
   @include pseudo;
   top: 0;
   left: 0;
-  width: 19px;
-  height: 19px;
+  width: 24px;
+  height: 24px;
 }
 
-.feedback_checkbox:checked + .feedback__label::after {
-  background: url("/assets/img/checkmark.svg") no-repeat center;
+.feedback__checkbox:checked + .feedback__label::after {
+  background: url("../img/checkmark.svg") no-repeat center;
 }
 
 
@@ -170,7 +170,7 @@
     left: 19px;
     width: 30px;
     height: 26px;
-    background: url("/assets/img/clip.png") no-repeat center;
+    background: url("../img/clip.png") no-repeat center;
   }
 }
 
@@ -256,7 +256,6 @@
 
   .feedback__input {
     margin-bottom: 53px;
-    padding: 18px 0;
   }
 
   .feedback__input-group {
@@ -274,7 +273,6 @@
 
   .feedback__input {
     width: 262px;
-    height: 36px;
   }
 
   .feedback__message {
