@@ -6,10 +6,10 @@
   box-sizing: border-box;
   padding: 10px 0;
   margin-bottom: 30px;
-  @include font-set(18px, 25px, bold, #000000, left);
+  @include font-set(18px, 25px, bold, $black, left);
   outline: none;
   border: 0px solid transparent;
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid $black;
   box-shadow: none;
 
   &:last-of-type {
@@ -23,10 +23,10 @@
 
 .feedback__message {
   padding-left: 0;
-  @include font-set(18px, 25px, bold, #000000, left);
+  @include font-set(18px, 25px, bold, $black, left);
   outline: none;
   border: 0px;
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid $black;
   box-shadow: none;
   resize: none;
 }
@@ -34,12 +34,12 @@
 .feedback__placeholder {
   position: absolute;
   top: -58px;
-  @include font-set(18px, 25px, bold, #000000, left);
+  @include font-set(18px, 25px, bold, $black, left);
 
   span {
     font-size: 18px;
     font-weight: bold;
-    color: #ff0725;
+    color: $red;
   }
 }
 
@@ -61,41 +61,41 @@
 }
 
 .feedback__input::-webkit-input-placeholder {
-  color: #000000;
+  color: $black;
 }
 
 .feedback__input::-moz-placeholder {
-  color: #000000;
+  color: $black;
   opacity: 1;
 }
 
 .feedback__input:-moz-placeholder {
-  color: #000000;
+  color: $black;
   opacity: 1;
 }
 
 .feedback__input:-ms-input-placeholder {
-  color: #000000;
+  color: $black;
   opacity: 1;
 }
 
 .feedback__input::-ms-input-placeholder {
-  color: #000000;
+  color: $black;
   opacity: 1;
 }
 
 .feedback__input::-moz-placeholder {
-  color: #000000;
+  color: $black;
   opacity: 1;
 }
 
 .feedback__message::-webkit-input-placeholder {
   padding: 30px 0;
-  color: #000000;
+  color: $black;
 }
 
 .feedback__message:-ms-input-placeholder {
-  color: #000000 !important;
+  color: $black !important;
   opacity: 1 !important;
 }
 
@@ -110,7 +110,7 @@
   line-height: 20.01px;
   font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
   text-align: left;
-  color: #000000;
+  color: $black;
 }
 
 .feedback__label::before {
@@ -119,7 +119,7 @@
   left: 0;
   width: 24px;
   height: 24px;
-  border: 1px solid #000000;
+  border: 1px solid $black;
   border-radius: 2px;
 }
 // Это правило ДОЛЖНО работать, но оно ломает псевдоэлемент ::after!!!
@@ -135,14 +135,14 @@
 
 .feedback__form {
   @include flex-centerer(vertical);
-  background-color: #ffffff;
+  background-color: $white;
 }
 
 .feedback__btn {
   box-sizing: border-box;
   padding: 19px 5px;
   margin-bottom: 17px;
-  @include font-set(16px, 25px, bold, #000000, center);
+  @include font-set(16px, 25px, bold, $black, center);
   text-transform: uppercase;
 }
 
@@ -152,7 +152,7 @@
   width: 100%;
   order: 2;
   padding-left: 36px;
-  border: 1px dashed #000000;
+  border: 1px dashed $black;
   border-radius: 8px;
 
   &:before {
@@ -178,7 +178,7 @@
   margin-bottom: 15px;
   background-color: #f17f8f;
   font-size: 18px;
-  color: #ffffff;
+  color: $white;
 }
 
 .feedback__footnote {
@@ -191,7 +191,7 @@
 .feedback__text {
   display: block;
   margin-bottom: 8px;
-  @include font-set(12.53px, 24.26px, 700, #000000, center);
+  @include font-set(12.53px, 24.26px, 700, $black, center);
 }
 
 @media (min-width: $desktop-width) {

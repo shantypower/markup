@@ -11,7 +11,7 @@
 
 .reviews__title {
   padding-bottom: 6px;
-  @include font-set(36.01px, 25.01px, bold, #000000, center);
+  @include font-set(36.01px, 25.01px, bold, $black, center);
 }
 
 .reviews__list {
@@ -27,20 +27,20 @@
 }
 
 .reviews__name {
-  @include font-set(20.04px, 22.01px, normal, #000000, center);
+  @include font-set(20.04px, 22.01px, normal, $black, center);
   margin-bottom: 15px;
 }
 
 .reviews__link {
   display: block;
   margin-bottom: 11px;
-  @include font-set(16.03px, 22.01px, 300, #e46b7c, center);
+  @include font-set(16.03px, 22.01px, 300, $link-color, center);
 }
 
 .reviews__text {
   width: 206px;
   @include push-center;
-  @include font-set(14.02px, 22px, 300, #000000, center);
+  @include font-set(14.02px, 22px, 300, $black, center);
   font-style: italic;
 }
 
@@ -69,25 +69,6 @@
 .reviews__arrow--left {
   left: 4px;
   transform: rotate(180deg);
-}
-
-.reviews__rating {
-  text-align: center;
-}
-
-.reviews__rating .icon {
-  display: inline-block;
-  margin-right: 10px;
-  width: 21px;
-  height: 21px;
-  stroke-width: 0;
-  stroke: #ffd2d1;
-  fill: #ffd2d1;
-  opacity: 0.5;
-
-  &:first-child {
-    opacity: 1;
-  }
 }
 
 @media (min-width: $desktop-width) {

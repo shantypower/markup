@@ -104,12 +104,12 @@
       </section>
 
       <section class="feedback">
+        <h2 class="visually-hidden">Форма обратной связи</h2>
         <form class="feedback__form" action="" method="post" enctype="multipart/form-data">
           <div class="feedback__input-group">
-            <input class="feedback__input" type="text" name="name" id="name-field" placeholder="Ваше имя" minlength="2">
-            <input class="feedback__input feedback__input--phone" type="tel" name="phone" id="phone-field" placeholder="Ваш телефон"
-              title="Пример ввода 7(999)999-999-99-99" maxlength='15' pattern="7\[0-9]{3}\[0-9]{3}-[0-9]{2}-[0-9]{2}"
-              required aria-required="true">
+            <input class="feedback__input" type="text" name="name" id="name-field" placeholder="Ваше имя" autofocus>
+            <input class="feedback__input feedback__input--phone validate[required,custom[phone]]" type="tel" name="phone"
+              id="phone-field" placeholder="Ваш телефон" required data-prompt-position="bottomLeft">
             <label class="feedback__placeholder feedback__placeholder--phone" for="phone-field"><span>*</span></label>
             <input class="feedback__input feedback__input--email" type="email" name="email" id="email-field"
               placeholder="Ваш e-mail" required aria-required="true">
@@ -120,7 +120,7 @@
             на обработку персональных <br>данных</label>
           <input class="feedback__checkbox visually-hidden" type="checkbox" name="agreement" id="agreement-field">
           <label class="feedback__btn feedback__btn--affix" for="file-field">Прикрепить файл
-            <input class="feedback__upload" type="file" name="file" id="file-field"></button>
+            <input class="feedback__upload" type="file" name="file" id="file-field">
           </label>
           <button class="feedback__btn feedback__btn--send" type="submit">Отправить</button>
           <div class="feedback__footnote">
