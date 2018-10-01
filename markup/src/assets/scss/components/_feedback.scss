@@ -146,8 +146,10 @@
   text-transform: uppercase;
 }
 
-.feedback__btn--affix {
+.feedback__btn.feedback__btn--affix {
   display: block;
+  margin-left: 0;
+  margin-right: 0;
   position: relative;
   width: 100%;
   order: 2;
@@ -208,7 +210,7 @@
     box-shadow: 10px 10px 30px 10px #ffedef;
   }
 
-  .feedback__btn--affix {
+  .feedback__btn.feedback__btn--affix {
     position: absolute;
     top: 213px;
     left: 172px;
@@ -226,7 +228,7 @@
 
   .feedback__label {
     order: 2;
-    margin-bottom: 33px;
+    margin-bottom: 15px;
     width: 100%;;
     font-size: 19.2px;
     line-height: 23.99px;
