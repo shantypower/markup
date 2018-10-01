@@ -18,7 +18,7 @@
 }
 
 .feedback__input-group {
-  margin-bottom: 15px;
+  margin-bottom: 32px;
 }
 
 .feedback__message {
@@ -99,10 +99,16 @@
   opacity: 1 !important;
 }
 
-.feedback__label {
+.feedback__message::-moz-placeholder {
+  color: $black;
+  opacity: 1;
+}
+
+.feedback .feedback__label {
   order: 1;
   position: relative;
   padding-left: 35px;
+  margin-left: 0;
   margin-bottom: 16px;
   width: 100%;
   font-weight: 600;
@@ -113,7 +119,7 @@
   color: $black;
 }
 
-.feedback__label::before {
+ .feedback__label::before {
   @include pseudo;
   top: 2px;
   left: 0;
@@ -122,19 +128,22 @@
   border: 1px solid $black;
   border-radius: 2px;
 }
-// Это правило ДОЛЖНО работать, но оно ломает псевдоэлемент ::after!!!
-.feedback .feedback_checkbox:checked + .feedback__label::after {
+
+.feedback__label::after {
   @include pseudo;
   top: 0;
   left: 0;
   width: 19px;
   height: 19px;
+}
+
+.feedback_checkbox:checked + .feedback__label::after {
   background: url("/assets/img/checkmark.svg") no-repeat center;
 }
 
 
 .feedback__form {
-  @include flex-centerer(vertical);
+  display: block;
   background-color: $white;
 }
 
@@ -171,13 +180,14 @@
 
 .feedback__btn--send {
   box-sizing: border-box;
+  width: 100%;
   order: 3;
   align-self: stretch;
   padding: 18px 5px;
-  margin-top: 17px;
+  margin-top: 0;
   margin-bottom: 15px;
   background-color: #f17f8f;
-  font-size: 18px;
+  font-size: 17px;
   color: $white;
 }
 
@@ -208,8 +218,10 @@
     box-shadow: 10px 10px 30px 10px #ffedef;
   }
 
-  .feedback__btn--affix {
+  .feedback__btn.feedback__btn--affix {
     position: absolute;
+    margin-left: 0;
+    margin-right: 0;
     top: 213px;
     left: 172px;
     order: 1;
@@ -221,14 +233,15 @@
   }
 
   .feedback__btn--send {
+    margin-top: 17px;
     margin-bottom: 24px;
   }
 
-  .feedback__label {
+  .feedback .feedback__label {
     order: 2;
-    margin-bottom: 33px;
+    margin-bottom: 15px;
     width: 100%;;
-    font-size: 19.2px;
+    font-size: 18.99px;
     line-height: 23.99px;
     font-weight: 700;
 

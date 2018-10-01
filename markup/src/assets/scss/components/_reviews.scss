@@ -1,12 +1,14 @@
 .reviews {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   @include flex-centerer(vertical);
   @include push-center;
   width: 230px;
   padding-top: 51px;
   padding-bottom: 17px;
   margin-bottom: 79px;
-  box-shadow: 10px 10px 30px 10px #ffedef;
+  -webkit-box-shadow: 10px 10px 30px 10px #ffedef;
+          box-shadow: 10px 10px 30px 10px #ffedef;
 }
 
 .reviews__title {
@@ -22,8 +24,10 @@
 }
 
 .reviews__list-item {
-  flex-basis: 260px;
-  flex-shrink: 0;
+  -ms-flex-preferred-size: 260px;
+      flex-basis: 260px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .reviews__name {
@@ -56,6 +60,7 @@
 
 .reviews__arrow {
   position: absolute;
+  top: 314px;
   width: 50px;
   height: 30px;
   background: url("/assets/img/arrow.svg") no-repeat center;
@@ -68,14 +73,17 @@
 
 .reviews__arrow--left {
   left: 4px;
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 @media (min-width: $desktop-width) {
   .reviews {
     margin-bottom: 168px;
     width: 873px;
-    box-shadow: 10px 10px 30px 10px #ffedef;
+    -webkit-box-shadow: 10px 10px 30px 10px #ffedef;
+            box-shadow: 10px 10px 30px 10px #ffedef;
   }
 
   .reviews__title {
@@ -105,9 +113,16 @@
   }
 
   .reviews__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 788px;
   }
   .reviews__list-item {
