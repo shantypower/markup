@@ -109,10 +109,10 @@
           <div class="feedback__input-group">
             <input class="feedback__input" type="text" name="name" id="name-field" placeholder="Ваше имя" autofocus>
             <input class="feedback__input feedback__input--phone validate[required,custom[phone]]" type="tel" name="phone"
-              id="phone-field" placeholder="Ваш телефон" required data-prompt-position="bottomLeft">
+              id="phone-field" placeholder="Ваш телефон" required data-prompt-position="bottomLeft" aria-label="Ваш телефон">
             <label class="feedback__placeholder feedback__placeholder--phone" for="phone-field"><span>*</span></label>
             <input class="feedback__input feedback__input--email" type="email" name="email" id="email-field"
-              placeholder="Ваш e-mail" required aria-required="true">
+              placeholder="Ваш e-mail" required aria-required="true" aria-label="Ваш email">
             <label class="feedback__placeholder feedback__placeholder--email" for="email-field"><span>*</span></label>
             <textarea class="feedback__message" name="message" id="message" cols="30" rows="4" placeholder="Сообщение"></textarea>
           </div>
