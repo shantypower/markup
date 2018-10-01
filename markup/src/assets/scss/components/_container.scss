@@ -8,7 +8,7 @@
 
 .container__wrapper {
   position: relative;
-  padding: 8px 20px;
+  padding: 65px 20px;
   padding-bottom: 18px;
   background-color: $white;
   }
@@ -20,6 +20,7 @@
     }
 
     .container__wrapper {
+      padding-top: 8px;
       padding-bottom: 118px;
     }
   }
