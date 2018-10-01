@@ -211,6 +211,7 @@
 
   .feedback__form {
     padding: 47px 68px;
+    padding-top: 45px;
     padding-bottom: 23px;
     @include push-center;
     width: 724px;
@@ -233,7 +234,7 @@
   }
 
   .feedback__btn--send {
-    margin-top: 17px;
+    margin-top: 19px;
     margin-bottom: 24px;
   }
 
@@ -255,7 +256,7 @@
   }
 
   .feedback__input {
-    margin-bottom: 53px;
+    margin-bottom: 51px;
   }
 
   .feedback__input-group {
