@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $('.reviews__list').slick({
+  $(".reviews__list").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     mobileFirst: true,

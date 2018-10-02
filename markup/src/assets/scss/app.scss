@@ -1,8 +1,8 @@
-@charset 'utf-8';
+@charset "utf-8";
 
-@import 'settings';
-@import 'foundation';
-@import 'motion-ui';
+@import "settings";
+@import "foundation";
+@import "motion-ui";
 
 @include foundation-global-styles;
 @include foundation-grid;
@@ -58,22 +58,22 @@
 @import "vendor/index-menu";
 
 // mixins
-@import 'mixins/container-border';
-@import 'mixins/flex';
-@import 'mixins/fonts';
-@import 'mixins/avatar';
-@import 'mixins/helpers';
-@import 'mixins/lists';
-@import 'mixins/psuedo';
-@import 'mixins/push-center';
-@import 'mixins/sidelines';
-@import 'mixins/zindex';
+@import "mixins/container-border";
+@import "mixins/flex";
+@import "mixins/fonts";
+@import "mixins/avatar";
+@import "mixins/helpers";
+@import "mixins/lists";
+@import "mixins/psuedo";
+@import "mixins/push-center";
+@import "mixins/sidelines";
+@import "mixins/zindex";
 
 // global styles
-@import 'global/layout';
+@import "global/layout";
 
 // custom components
-@import 'components/navigation/main-nav';
-@import 'components/container';
-@import 'components/reviews';
-@import 'components/feedback';
+@import "components/navigation/main-nav";
+@import "components/container";
+@import "components/reviews";
+@import "components/feedback";

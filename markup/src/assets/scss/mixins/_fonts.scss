@@ -1,8 +1,8 @@
 @mixin font-set($f-s: 16px, $l-h: 20px, $f-w: 700, $text-color: $black, $text-align: left) {
-    font-weight: $f-w;
-    font-size: $f-s;
-    line-height: $l-h;
-    font-family: "Ubuntu", "Arial", "Helvetica", sans-serif;
-    text-align: $text-align;
-    color: $text-color;
-  }
+  font-weight: $f-w;
+  font-size: $f-s;
+  line-height: $l-h;
+  font-family: "Ubuntu", "Arial", "Helvetica", sans-serif;
+  text-align: $text-align;
+  color: $text-color;
+}
