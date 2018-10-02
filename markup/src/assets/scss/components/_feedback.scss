@@ -6,9 +6,10 @@
   box-sizing: border-box;
   padding: 10px 0;
   margin-bottom: 30px;
+
   @include font-set(18px, 25px, bold, $black, left);
   outline: none;
-  border: 0px solid transparent;
+  border: 0 solid transparent;
   border-bottom: 1px solid $black;
   box-shadow: none;
 
@@ -23,9 +24,10 @@
 
 .feedback__message {
   padding-left: 0;
+
   @include font-set(18px, 25px, bold, $black, left);
   outline: none;
-  border: 0px;
+  border: 0;
   border-bottom: 1px solid $black;
   box-shadow: none;
   resize: none;
@@ -34,6 +36,7 @@
 .feedback__placeholder {
   position: absolute;
   top: -58px;
+
   @include font-set(18px, 25px, bold, $black, left);
 
   span {
@@ -69,22 +72,12 @@
   opacity: 1;
 }
 
-.feedback__input:-moz-placeholder {
-  color: $black;
-  opacity: 1;
-}
-
 .feedback__input:-ms-input-placeholder {
   color: $black;
   opacity: 1;
 }
 
 .feedback__input::-ms-input-placeholder {
-  color: $black;
-  opacity: 1;
-}
-
-.feedback__input::-moz-placeholder {
   color: $black;
   opacity: 1;
 }
@@ -119,7 +112,7 @@
   color: $black;
 }
 
- .feedback__label::before {
+.feedback__label::before {
   @include pseudo;
   top: 2px;
   left: 0;
@@ -151,6 +144,7 @@
   box-sizing: border-box;
   padding: 19px 5px;
   margin-bottom: 17px;
+
   @include font-set(16px, 25px, bold, $black, center);
   text-transform: uppercase;
 }
@@ -164,7 +158,7 @@
   border: 1px dashed $black;
   border-radius: 8px;
 
-  &:before {
+  &::before {
     @include pseudo;
     top: 17px;
     left: 19px;
@@ -201,6 +195,7 @@
 .feedback__text {
   display: block;
   margin-bottom: 8px;
+
   @include font-set(12.53px, 24.26px, 700, $black, center);
 }
 
@@ -213,6 +208,7 @@
     padding: 47px 68px;
     padding-top: 45px;
     padding-bottom: 23px;
+
     @include push-center;
     width: 724px;
     min-height: 520px;
@@ -241,7 +237,7 @@
   .feedback .feedback__label {
     order: 2;
     margin-bottom: 15px;
-    width: 100%;;
+    width: 100%;
     font-size: 18.99px;
     line-height: 23.99px;
     font-weight: 700;
@@ -251,12 +247,13 @@
     }
 
     &::before {
-      top: 0px;
+      top: 0;
     }
   }
 
   .feedback__input {
     margin-bottom: 51px;
+    width: 262px;
   }
 
   .feedback__input-group {
@@ -272,10 +269,6 @@
     }
   }
 
-  .feedback__input {
-    width: 262px;
-  }
-
   .feedback__message {
     width: 262px;
   }
@@ -285,7 +278,7 @@
   }
 
   .feedback__input:not(:nth-last-of-type(2n)) {
-    margin-right: 60px; 
+    margin-right: 60px;
   }
 
   .feedback__placeholder--phone {
