@@ -7,97 +7,19 @@
       <h1 class="visually-hidden">Отзывы и контакты</h1>
       <section class="reviews">
         <h2 class="reviews__title">Отзывы</h2>
-        <ul class="reviews__list">
+        <script id="template" type="text/x-handlebars-template">
+          {{#each updates}}
           <li class="reviews__list-item">
             <div class="reviews__image">
-              <img src="assets/img/user1.png" alt="фото Влада Гончарова" width="81" height="81">
+              <img src="assets/img/{{photo}}" alt="фото {{name}}" width="81" height="81">
             </div>
-            <h3 class="reviews__name">Влад Гончаров</h3>
-            <a class="reviews__link" href="https://vk.com/ex3der" target="_blank">vk.com/ex3der</a>
-            <p class="reviews__text">Предсознательное иллюстрирует девиантный филогенез. Восприятие, на первый
-              взгляд, отчуждает генезис. Филогенез, например, слабопроницаем. Действие притягивает депрессивный
-              инсайт.</p>
+            <h3 class="reviews__name">{{name}}</h3>
+            <a class="reviews__link" href="https://{{vklink}}" target="_blank">{{vklink}}</a>
+            <p class="reviews__text">{{reviewText}}</p>
           </li>
-          <li class="reviews__list-item">
-            <div class="reviews__image">
-              <img src="assets/img/user2.png" alt="фото Вани Мирошникова" width="81" height="81">
-            </div>
-            <h3 class="reviews__name">Ваня Мирошников</h3>
-            <a class="reviews__link" href="https://vk.com/id16362672" target="_blank">vk.com/id16362672</a>
-            <p class="reviews__text">Предсознательное иллюстрирует девиантный филогенез. Восприятие, на первый
-              взгляд, отчуждает генезис. Филогенез, например, слабопроницаем. Действие притягивает депрессивный
-              инсайт.</p>
-          </li>
-          <li class="reviews__list-item">
-            <div class="reviews__image">
-              <img src="assets/img/user3.png" alt="фото Алексея Волкова" width="81" height="81">
-            </div>
-            <h3 class="reviews__name">Алексей Волков</h3>
-            <a class="reviews__link" href="https://vk.com/asgalex" target="_blank">vk.com/asgalex</a>
-            <p class="reviews__text">Предсознательное иллюстрирует девиантный филогенез. Восприятие, на первый
-              взгляд, отчуждает генезис. Филогенез, например, слабопроницаем. Действие притягивает депрессивный
-              инсайт.</p>
-          </li>
-          <li class="reviews__list-item">
-            <div class="reviews__image">
-              <img src="assets/img/user1.png" alt="фото Влада Гончарова" width="81" height="81">
-            </div>
-            <h3 class="reviews__name">Влад Гончаров</h3>
-            <a class="reviews__link" href="https://vk.com/ex3der" target="_blank">vk.com/ex3der</a>
-            <p class="reviews__text">Предсознательное иллюстрирует девиантный филогенез. Восприятие, на первый
-              взгляд, отчуждает генезис. Филогенез, например, слабопроницаем. Действие притягивает депрессивный
-              инсайт.</p>
-          </li>
-          <li class="reviews__list-item">
-            <div class="reviews__image">
-              <img src="assets/img/user2.png" alt="фото Вани Мирошникова" width="81" height="81">
-            </div>
-            <h3 class="reviews__name">Ваня Мирошников</h3>
-            <a class="reviews__link" href="https://vk.com/id16362672" target="_blank">vk.com/id16362672</a>
-            <p class="reviews__text">Предсознательное иллюстрирует девиантный филогенез. Восприятие, на первый
-              взгляд, отчуждает генезис. Филогенез, например, слабопроницаем. Действие притягивает депрессивный
-              инсайт.</p>
-          </li>
-          <li class="reviews__list-item">
-            <div class="reviews__image">
-              <img src="assets/img/user3.png" alt="фото Алексея Волкова" width="81" height="81">
-            </div>
-            <h3 class="reviews__name">Алексей Волков</h3>
-            <a class="reviews__link" href="https://vk.com/asgalex" target="_blank">vk.com/asgalex</a>
-            <p class="reviews__text">Предсознательное иллюстрирует девиантный филогенез. Восприятие, на первый
-              взгляд, отчуждает генезис. Филогенез, например, слабопроницаем. Действие притягивает депрессивный
-              инсайт.</p>
-          </li>
-          <li class="reviews__list-item">
-            <div class="reviews__image">
-              <img src="assets/img/user1.png" alt="фото Влада Гончарова" width="81" height="81">
-            </div>
-            <h3 class="reviews__name">Влад Гончаров</h3>
-            <a class="reviews__link" href="https://vk.com/ex3der" target="_blank">vk.com/ex3der</a>
-            <p class="reviews__text">Предсознательное иллюстрирует девиантный филогенез. Восприятие, на первый
-              взгляд, отчуждает генезис. Филогенез, например, слабопроницаем. Действие притягивает депрессивный
-              инсайт.</p>
-          </li>
-          <li class="reviews__list-item">
-            <div class="reviews__image">
-              <img src="assets/img/user2.png" alt="фото Вани Мирошникова" width="81" height="81">
-            </div>
-            <h3 class="reviews__name">Ваня Мирошников</h3>
-            <a class="reviews__link" href="https://vk.com/id16362672" target="_blank">vk.com/id16362672</a>
-            <p class="reviews__text">Предсознательное иллюстрирует девиантный филогенез. Восприятие, на первый
-              взгляд, отчуждает генезис. Филогенез, например, слабопроницаем. Действие притягивает депрессивный
-              инсайт.</p>
-          </li>
-          <li class="reviews__list-item">
-            <div class="reviews__image">
-              <img src="assets/img/user3.png" alt="фото Алексея Волкова" width="81" height="81">
-            </div>
-            <h3 class="reviews__name">Алексей Волков</h3>
-            <a class="reviews__link" href="https://vk.com/asgalex" target="_blank">vk.com/asgalex</a>
-            <p class="reviews__text">Предсознательное иллюстрирует девиантный филогенез. Восприятие, на первый
-              взгляд, отчуждает генезис. Филогенез, например, слабопроницаем. Действие притягивает депрессивный
-              инсайт.</p>
-          </li>
+          {{/each}}
+          </script>
+        <ul class="reviews__list updates">
         </ul>
         <button class="reviews__arrow reviews__arrow--left"></button>
         <button class="reviews__arrow reviews__arrow--right"></button>
@@ -135,6 +57,7 @@
 
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="assets/js/handlebars.min.js"></script>
   <script src="assets/js/app.js"></script>
   <script src="assets/jquery/slick/slick.min.js"></script>
 
