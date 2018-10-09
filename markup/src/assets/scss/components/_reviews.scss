@@ -1,12 +1,13 @@
 .reviews {
   box-sizing: border-box;
+
   @include flex-centerer(vertical);
   @include push-center;
   width: 230px;
   padding-top: 51px;
   padding-bottom: 17px;
   margin-bottom: 79px;
-  box-shadow: 10px 10px 30px 10px #ffedef;
+  box-shadow: 10px 10px 30px 0px #fff1f2;
 }
 
 .reviews__title {
@@ -39,6 +40,7 @@
 
 .reviews__text {
   width: 206px;
+
   @include push-center;
   @include font-set(14.02px, 22px, 300, $black, center);
   font-style: italic;
@@ -49,6 +51,7 @@
 
   img {
     display: block;
+
     @include push-center;
     @include avatar(81px, 81px, 50%);
   }
@@ -56,9 +59,10 @@
 
 .reviews__arrow {
   position: absolute;
+  top: 304px;
   width: 50px;
-  height: 30px;
-  background: url("/assets/img/arrow.svg") no-repeat center;
+  height: 50px;
+  background: url("../img/arrow.svg") no-repeat center;
   background-size: 50px;
 }
 
@@ -75,7 +79,7 @@
   .reviews {
     margin-bottom: 168px;
     width: 873px;
-    box-shadow: 10px 10px 30px 10px #ffedef;
+    box-shadow: 10px 10px 30px 0px #fff1f2;
   }
 
   .reviews__title {
@@ -110,14 +114,15 @@
     justify-content: space-between;
     width: 788px;
   }
+
   .reviews__list-item {
     width: 248px;
   }
 
   .reviews__arrow {
-    top: 268px;
+    top: 253px;
     width: 66px;
-    height: 36px;
+    height: 66px;
     background-size: 66px;
   }
 

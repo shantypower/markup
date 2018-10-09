@@ -1,26 +1,28 @@
 .container {
-    box-sizing: border-box;
-    width: 320px;
-    padding: 12px;
-    margin: 0 auto;
-    background-color: #fff0ed;
-  }
+  box-sizing: border-box;
+  width: 320px;
+  padding: 12px;
+  margin: 0 auto;
+  background-color: #fff0ed;
+}
 
 .container__wrapper {
   position: relative;
-  padding: 65px 20px;
-  padding-bottom: 18px;
+  padding-top: 65px;
+  padding-left: 23px;
+  padding-right: 17px;
+  padding-bottom: 26px;
   background-color: $white;
-  }
-  
-  @media (min-width: $desktop-width) {
-    .container {
-      width: 1024px;
-      padding: 26px;
-    }
+}
 
-    .container__wrapper {
-      padding-top: 8px;
-      padding-bottom: 118px;
-    }
+@media (min-width: $desktop-width) {
+  .container {
+    width: 1024px;
+    padding: 26px;
   }
+
+  .container__wrapper {
+    padding-top: 8px;
+    padding-bottom: 118px;
+  }
+}
