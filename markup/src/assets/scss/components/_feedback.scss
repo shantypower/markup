@@ -1,59 +1,155 @@
 .feedback {
   position: relative;
-}
 
-.feedback__input {
-  box-sizing: border-box;
-  padding: 10px 0;
-  margin-bottom: 30px;
+  &__input {
+    box-sizing: border-box;
+    padding: 10px 0;
+    margin-bottom: 30px;
 
-  @include font-set(18px, 25px, bold, $black, left);
-  outline: none;
-  border: 0 solid transparent;
-  border-bottom: 1px solid $black;
-  box-shadow: none;
+    @include font-set(18px, 25px, bold, $black, left);
+    outline: none;
+    border: 0 solid transparent;
+    border-bottom: 1px solid $black;
+    box-shadow: none;
 
-  &:last-of-type {
-    margin-bottom: 0;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
-}
 
-.feedback__input-group {
-  margin-bottom: 32px;
-}
-
-.feedback__message {
-  padding-left: 0;
-
-  @include font-set(18px, 25px, bold, $black, left);
-  outline: none;
-  border: 0;
-  border-bottom: 1px solid $black;
-  box-shadow: none;
-  resize: none;
-}
-
-.feedback__placeholder {
-  position: absolute;
-  top: -58px;
-
-  @include font-set(18px, 25px, bold, $black, left);
-
-  span {
-    font-size: 18px;
-    font-weight: bold;
-    color: $red;
+  &__input-group {
+    margin-bottom: 32px;
   }
-}
 
-.feedback__placeholder--phone {
-  left: 126px;
-  top: 77px;
-}
+  &__message {
+    padding-left: 0;
 
-.feedback__placeholder--email {
-  left: 96px;
-  top: 146px;
+    @include font-set(18px, 25px, bold, $black, left);
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid $black;
+    box-shadow: none;
+    resize: none;
+  }
+
+  &__placeholder {
+    position: absolute;
+    top: -58px;
+
+    @include font-set(18px, 25px, bold, $black, left);
+
+    span {
+      font-size: 18px;
+      font-weight: bold;
+      color: $red;
+    }
+
+    &--phone {
+      left: 126px;
+      top: 77px;
+    }
+
+    &--email {
+      left: 96px;
+      top: 146px;
+    }
+  }
+
+  &__label {
+    order: 1;
+    position: relative;
+    padding-left: 35px;
+    margin-left: 0;
+    margin-bottom: 16px;
+    width: 100%;
+    font-weight: 600;
+    font-size: 15.01px;
+    line-height: 20.01px;
+    font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
+    text-align: left;
+    color: $black;
+
+    &::before {
+      @include pseudo;
+      top: 2px;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      border: 1px solid $black;
+      border-radius: 2px;
+    }
+
+    &::after {
+      @include pseudo;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__checkbox:checked + &__label::after {
+    background: url("../img/checkmark.svg") no-repeat center;
+  }
+
+  &__form {
+    display: block;
+    background-color: $white;
+  }
+
+  &__btn {
+    box-sizing: border-box;
+    padding: 19px 5px;
+    margin-bottom: 17px;
+
+    @include font-set(16px, 25px, bold, $black, center);
+    text-transform: uppercase;
+
+    &--affix {
+      display: block;
+      position: relative;
+      width: 100%;
+      order: 2;
+      padding-left: 36px;
+      border: 1px dashed $black;
+      border-radius: 8px;
+
+      &::before {
+        @include pseudo;
+        top: 17px;
+        left: 19px;
+        width: 30px;
+        height: 26px;
+        background: url("../img/clip.png") no-repeat center;
+      }
+    }
+    &--send {
+      box-sizing: border-box;
+      width: 100%;
+      order: 3;
+      align-self: stretch;
+      padding: 18px 5px;
+      margin-top: 0;
+      margin-bottom: 15px;
+      background-color: #f17f8f;
+      font-size: 17px;
+      color: $white;
+    }
+  }
+
+  &__footnote {
+    align-self: stretch;
+    order: 4;
+    margin-bottom: 30px;
+    opacity: 0.3;
+  }
+
+  &__text {
+    display: block;
+    margin-bottom: 8px;
+
+    @include font-set(12.53px, 24.26px, 700, $black, center);
+  }
 }
 
 .feedback__input--phone:focus + .feedback__placeholder--phone,
@@ -97,106 +193,8 @@
   opacity: 1;
 }
 
-.feedback .feedback__label {
-  order: 1;
-  position: relative;
-  padding-left: 35px;
-  margin-left: 0;
-  margin-bottom: 16px;
-  width: 100%;
-  font-weight: 600;
-  font-size: 15.01px;
-  line-height: 20.01px;
-  font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
-  text-align: left;
-  color: $black;
-}
-
-.feedback__label::before {
-  @include pseudo;
-  top: 2px;
-  left: 0;
-  width: 24px;
-  height: 24px;
-  border: 1px solid $black;
-  border-radius: 2px;
-}
-
-.feedback__label::after {
-  @include pseudo;
-  top: 0;
-  left: 0;
-  width: 24px;
-  height: 24px;
-}
-
-.feedback__checkbox:checked + .feedback__label::after {
-  background: url("../img/checkmark.svg") no-repeat center;
-}
-
-
-.feedback__form {
-  display: block;
-  background-color: $white;
-}
-
-.feedback__btn {
-  box-sizing: border-box;
-  padding: 19px 5px;
-  margin-bottom: 17px;
-
-  @include font-set(16px, 25px, bold, $black, center);
-  text-transform: uppercase;
-}
-
-.feedback__btn--affix {
-  display: block;
-  position: relative;
-  width: 100%;
-  order: 2;
-  padding-left: 36px;
-  border: 1px dashed $black;
-  border-radius: 8px;
-
-  &::before {
-    @include pseudo;
-    top: 17px;
-    left: 19px;
-    width: 30px;
-    height: 26px;
-    background: url("../img/clip.png") no-repeat center;
-  }
-}
-
 .feedback__upload {
   display: none;
-}
-
-.feedback__btn--send {
-  box-sizing: border-box;
-  width: 100%;
-  order: 3;
-  align-self: stretch;
-  padding: 18px 5px;
-  margin-top: 0;
-  margin-bottom: 15px;
-  background-color: #f17f8f;
-  font-size: 17px;
-  color: $white;
-}
-
-.feedback__footnote {
-  align-self: stretch;
-  order: 4;
-  margin-bottom: 30px;
-  opacity: 0.3;
-}
-
-.feedback__text {
-  display: block;
-  margin-bottom: 8px;
-
-  @include font-set(12.53px, 24.26px, 700, $black, center);
 }
 
 @media (min-width: $desktop-width) {

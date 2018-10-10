@@ -4,25 +4,23 @@
   padding: 12px;
   margin: 0 auto;
   background-color: #fff3f1;
-}
 
-.container__wrapper {
-  position: relative;
-  padding-top: 65px;
-  padding-left: 23px;
-  padding-right: 17px;
-  padding-bottom: 26px;
-  background-color: $white;
-}
-
-@media (min-width: $desktop-width) {
-  .container {
-    width: 1024px;
-    padding: 26px;
+  &__wrapper {
+    position: relative;
+    padding-top: 65px;
+    padding-left: 23px;
+    padding-right: 17px;
+    padding-bottom: 26px;
+    background-color: $white;
   }
 
-  .container__wrapper {
-    padding-top: 8px;
-    padding-bottom: 118px;
+  @media (min-width: $desktop-width) {
+    width: 1024px;
+    padding: 26px;
+
+    &__wrapper {
+      padding-top: 8px;
+      padding-bottom: 118px;
+    }
   }
 }
