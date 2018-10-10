@@ -1,0 +1,17 @@
+<h2 class="reviews__title">Отзывы</h2>
+<ul class="reviews__list updates">
+  <script id="template" type="text/x-handlebars-template">
+    {{#updates}}
+      <li class="reviews__list-item">
+        <div class="reviews__image">
+          <img src="assets/img/{{photo}}" alt="фото {{name}}" width="81" height="81">
+        </div>
+        <h3 class="reviews__name">{{name}}</h3>
+        <a class="reviews__link" href="https://{{vklink}}" target="_blank">{{vklink}}</a>
+        <p class="reviews__text">{{reviewText}}</p>
+      </li>
+    {{/updates}}
+  </script>
+</ul>
+<button class="reviews__arrow reviews__arrow--left"></button>
+<button class="reviews__arrow reviews__arrow--right"></button>
