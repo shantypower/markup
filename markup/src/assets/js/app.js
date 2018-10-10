@@ -1,4 +1,6 @@
 $(document).ready(function () {
+  var source = $("#template").html();
+  var template = Handlebars.compile(source);
   var data = {
     updates: [
       {
@@ -21,9 +23,7 @@ $(document).ready(function () {
       }
     ]
   }
-
-  var template = Handlebars.compile($('#template').html());
-  $('.updates').html(template(data));
+  $('.updates').append(template(data));
 
   $(".reviews__list").slick({
     slidesToShow: 1,
