@@ -1,8 +1,8 @@
 <li class="reviews__list-item">
   <div class="reviews__image">
-    <img src="assets/img/{{photo}}" alt="фото {{name}}" width="81" height="81">
+    <img src="assets/img/{{data.photo}}" alt="фото {{data.name}}" width="81" height="81">
   </div>
-  <h3 class="reviews__name">{{name}</h3>
-  <a class="reviews__link" href="https://{{vklink}}" target="_blank">{{vklink}}</a>
-  <p class="reviews__text">{{reviewText}}</p>
+  <h3 class="reviews__name">{{data.name}</h3>
+  <a class="reviews__link" href="https://{{this.vklink}}" target="_blank">{{data.vklink}}</a>
+  <p class="reviews__text">{{data.reviewText}}</p>
 </li>
