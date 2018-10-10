@@ -1,6 +1,10 @@
 .feedback {
   position: relative;
 
+  @media (min-width: $desktop-width) {
+    min-height: 482px;
+  }
+
   &__input {
     box-sizing: border-box;
     padding: 10px 0;
@@ -12,6 +16,34 @@
     border-bottom: 1px solid $black;
     box-shadow: none;
 
+    &::-webkit-input-placeholder {
+      color: $black;
+    }
+
+    &::-moz-placeholder {
+      color: $black;
+      opacity: 1;
+    }
+
+    &:-ms-input-placeholder {
+      color: $black;
+      opacity: 1;
+    }
+
+    ::-ms-input-placeholder {
+      color: $black;
+      opacity: 1;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 51px;
+      width: 262px;
+
+      &:not(:nth-last-of-type(2n)) {
+        margin-right: 60px;
+      }
+    }
+
     &:last-of-type {
       margin-bottom: 0;
     }
@@ -19,6 +51,15 @@
 
   &__input-group {
     margin-bottom: 32px;
+
+    @media (min-width: $desktop-width) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      margin-bottom: 31px;
+      width: 588px;
+    }
   }
 
   &__message {
@@ -30,6 +71,30 @@
     border-bottom: 1px solid $black;
     box-shadow: none;
     resize: none;
+
+    &::-webkit-input-placeholder {
+      padding: 30px 0;
+      color: $black;
+    }
+
+    &:-ms-input-placeholder {
+      color: $black !important;
+      opacity: 1 !important;
+    }
+
+    &::-moz-placeholder {
+      color: $black;
+      opacity: 1;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 262px;
+      height: 141px;
+
+      &::-webkit-input-placeholder {
+        padding-top: 0;
+      }
+    }
   }
 
   &__placeholder {
@@ -47,11 +112,21 @@
     &--phone {
       left: 126px;
       top: 77px;
+
+      @media (min-width: $desktop-width) {
+        top: 53px;
+        left: 619px;
+      }
     }
 
     &--email {
       left: 96px;
       top: 146px;
+
+      @media (min-width: $desktop-width) {
+        left: 271px;
+        top: 144px;
+      }
     }
   }
 
@@ -69,6 +144,19 @@
     text-align: left;
     color: $black;
 
+    @media (min-width: $desktop-width) {
+      order: 2;
+      margin-bottom: 15px;
+      width: 100%;
+      font-size: 18.99px;
+      line-height: 23.99px;
+      font-weight: 700;
+
+      br {
+        display: none;
+      }
+    }
+
     &::before {
       @include pseudo;
       top: 2px;
@@ -77,6 +165,10 @@
       height: 24px;
       border: 1px solid $black;
       border-radius: 2px;
+
+      @media (min-width: $desktop-width) {
+        top: 0;
+      }
     }
 
     &::after {
@@ -95,6 +187,17 @@
   &__form {
     display: block;
     background-color: $white;
+
+    @media (min-width: $desktop-width) {
+      padding: 47px 68px;
+      padding-top: 45px;
+      padding-bottom: 23px;
+
+      @include push-center;
+      width: 724px;
+      min-height: 520px;
+      box-shadow: 10px 10px 30px 0px #fff1f2;
+    }
   }
 
   &__btn {
@@ -114,6 +217,16 @@
       border: 1px dashed $black;
       border-radius: 8px;
 
+      @media (min-width: $desktop-width) {
+        position: absolute;
+        margin-left: 0;
+        margin-right: 0;
+        top: 213px;
+        left: 172px;
+        order: 1;
+        width: 277px;
+      }
+
       &::before {
         @include pseudo;
         top: 17px;
@@ -121,8 +234,13 @@
         width: 30px;
         height: 26px;
         background: url("../img/clip.png") no-repeat center;
+
+        @media (min-width: $desktop-width) {
+          left: 27px;
+        }
       }
     }
+
     &--send {
       box-sizing: border-box;
       width: 100%;
@@ -134,6 +252,11 @@
       background-color: #f17f8f;
       font-size: 17px;
       color: $white;
+
+      @media (min-width: $desktop-width) {
+        margin-top: 19px;
+        margin-bottom: 24px;
+      }
     }
   }
 
@@ -142,6 +265,13 @@
     order: 4;
     margin-bottom: 30px;
     opacity: 0.3;
+
+    @media (min-width: $desktop-width) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 0;
+    }
   }
 
   &__text {
@@ -150,6 +280,10 @@
 
     @include font-set(12.53px, 24.26px, 700, $black, center);
   }
+
+  &__upload {
+    display: none;
+  }
 }
 
 .feedback__input--phone:focus + .feedback__placeholder--phone,
@@ -157,142 +291,4 @@
 .feedback__input--email:focus + .feedback__placeholder--email,
 .feedback__input--email:valid + .feedback__placeholder--email {
   display: none;
-}
-
-.feedback__input::-webkit-input-placeholder {
-  color: $black;
-}
-
-.feedback__input::-moz-placeholder {
-  color: $black;
-  opacity: 1;
-}
-
-.feedback__input:-ms-input-placeholder {
-  color: $black;
-  opacity: 1;
-}
-
-.feedback__input::-ms-input-placeholder {
-  color: $black;
-  opacity: 1;
-}
-
-.feedback__message::-webkit-input-placeholder {
-  padding: 30px 0;
-  color: $black;
-}
-
-.feedback__message:-ms-input-placeholder {
-  color: $black !important;
-  opacity: 1 !important;
-}
-
-.feedback__message::-moz-placeholder {
-  color: $black;
-  opacity: 1;
-}
-
-.feedback__upload {
-  display: none;
-}
-
-@media (min-width: $desktop-width) {
-  .feedback {
-    min-height: 482px;
-  }
-
-  .feedback__form {
-    padding: 47px 68px;
-    padding-top: 45px;
-    padding-bottom: 23px;
-
-    @include push-center;
-    width: 724px;
-    min-height: 520px;
-    box-shadow: 10px 10px 30px 0px #fff1f2;
-  }
-
-  .feedback__btn.feedback__btn--affix {
-    position: absolute;
-    margin-left: 0;
-    margin-right: 0;
-    top: 213px;
-    left: 172px;
-    order: 1;
-    width: 277px;
-
-    &::before {
-      left: 27px;
-    }
-  }
-
-  .feedback__btn--send {
-    margin-top: 19px;
-    margin-bottom: 24px;
-  }
-
-  .feedback .feedback__label {
-    order: 2;
-    margin-bottom: 15px;
-    width: 100%;
-    font-size: 18.99px;
-    line-height: 23.99px;
-    font-weight: 700;
-
-    br {
-      display: none;
-    }
-
-    &::before {
-      top: 0;
-    }
-  }
-
-  .feedback__input {
-    margin-bottom: 51px;
-    width: 262px;
-  }
-
-  .feedback__input-group {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    margin-bottom: 31px;
-    width: 588px;
-
-    .feedback__message {
-      height: 141px;
-    }
-  }
-
-  .feedback__message {
-    width: 262px;
-  }
-
-  .feedback__message::-webkit-input-placeholder {
-    padding-top: 0;
-  }
-
-  .feedback__input:not(:nth-last-of-type(2n)) {
-    margin-right: 60px;
-  }
-
-  .feedback__placeholder--phone {
-    top: 53px;
-    left: 619px;
-  }
-
-  .feedback__placeholder--email {
-    left: 271px;
-    top: 144px;
-  }
-
-  .feedback__footnote {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 0;
-  }
 }
