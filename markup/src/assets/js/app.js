@@ -7,11 +7,11 @@ $(document).ready(function () {
     nextArrow: ".reviews__arrow--right",
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1023,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
-          mobileFirst: false
+        //  mobileFirst: false
         }
       }]
   });

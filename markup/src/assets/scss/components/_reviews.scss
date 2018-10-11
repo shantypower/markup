@@ -3,25 +3,25 @@
 
   @include flex-centerer(vertical);
   @include push-center;
-  width: 230px;
-  padding-top: 51px;
-  padding-bottom: 17px;
-  margin-bottom: 79px;
-  box-shadow: 10px 10px 30px 0px #fff1f2;
+  width: rem-calc(230);
+  padding-top: rem-calc(51);
+  padding-bottom: rem-calc(17);
+  margin-bottom: rem-calc(79);
+  box-shadow: rem-calc(10) rem-calc(10) rem-calc(30) 0 #fff1f2;
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 168px;
-    width: 873px;
-    box-shadow: 10px 10px 30px 0px #fff1f2;
+    margin-bottom: rem-calc(168);
+    width: rem-calc(873);
+    box-shadow: rem-calc(10) rem-calc(10) rem-calc(30) 0 #fff1f2;
   }
 
   &__title {
-    padding-bottom: 6px;
+    padding-bottom: rem-calc(6);
 
-    @include font-set(36.01px, 25.01px, bold, $black, center);
+    @include font-set(rem-calc(36.01), rem-calc(25.01), bold, $black, center);
 
     @media (min-width: $desktop-width) {
-      padding-bottom: 33px;
+      padding-bottom: rem-calc(33);
     }
   }
 
@@ -32,11 +32,11 @@
     overflow: hidden;
 
     &-item {
-      flex-basis: 260px;
+      flex-basis: rem-calc(260);
       flex-shrink: 0;
 
       @media (min-width: $desktop-width) {
-        width: 248px;
+        width: rem-calc(248);
       }
     }
 
@@ -44,92 +44,92 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      width: 788px;
+      width: rem-calc(788);
     }
   }
 
   &__name {
-    @include font-set(20.04px, 22.01px, normal, $black, center);
-    margin-bottom: 15px;
+    @include font-set(rem-calc(20.04), rem-calc(22.01), normal, $black, center);
+    margin-bottom: rem-calc(15);
 
     @media (min-width: $desktop-width) {
-      margin-bottom: 4px;
-      font-size: 18px;
-      line-height: 25px;
+      margin-bottom: rem-calc(4);
+      font-size: rem-calc(18);
+      line-height: rem-calc(25);
     }
   }
 
   &__link {
     display: block;
-    margin-bottom: 11px;
+    margin-bottom: rem-calc(11);
 
-    @include font-set(16.03px, 22.01px, 300, $link-color, center);
+    @include font-set(rem-calc(16.03), rem-calc(22.01), 300, $link-color, center);
 
     @media (min-width: $desktop-width) {
-      margin-bottom: 12px;
-      font-size: 15.97px;
-      line-height: 21.96px;
+      margin-bottom: rem-calc(12);
+      font-size: rem-calc(15.97);
+      line-height: rem-calc(21.96);
     }
   }
 
   &__text {
-    width: 206px;
+    width: rem-calc(206);
 
     @include push-center;
-    @include font-set(14.02px, 22px, 300, $black, center);
+    @include font-set(rem-calc(14.02), rem-calc(22), 300, $black, center);
     font-style: italic;
 
     @media (min-width: $desktop-width) {
-      width: 235px;
-      font-size: 13.40px;
-      line-height: 22.92px;
+      width: rem-calc(235);
+      font-size: rem-calc(13.40);
+      line-height: rem-calc(22.92);
     }
   }
 
   &__image {
-    padding: 20px;
+    padding: rem-calc(20);
 
     img {
       display: block;
 
       @include push-center;
-      @include avatar(81px, 81px, 50%);
+      @include avatar(rem-calc(81), rem-calc(81), 50%);
     }
 
     @media (min-width: $desktop-width) {
-      padding: 19px;
+      padding: rem-calc(19);
     }
   }
 
   &__arrow {
     position: absolute;
-    top: 304px;
-    width: 50px;
-    height: 50px;
+    top: rem-calc(304);
+    width: rem-calc(50);
+    height: rem-calc(50);
     background: url("../img/arrow.svg") no-repeat center;
-    background-size: 50px;
+    background-size: rem-calc(50);
 
     @media (min-width: $desktop-width) {
-      top: 253px;
-      width: 66px;
-      height: 66px;
-      background-size: 66px;
+      top: rem-calc(253);
+      width: rem-calc(66);
+      height: rem-calc(66);
+      background-size: rem-calc(66);
     }
 
     &--right {
-      right: 9px;
+      right: rem-calc(9);
 
       @media (min-width: $desktop-width) {
-        right: 18px;
+        right: rem-calc(18);
       }
     }
 
     &--left {
-      left: 4px;
+      left: rem-calc(4);
       transform: rotate(180deg);
 
       @media (min-width: $desktop-width) {
-        left: 15px;
+        left: rem-calc(15);
       }
     }
   }
