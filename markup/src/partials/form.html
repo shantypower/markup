@@ -1,0 +1,24 @@
+  <h2 class="visually-hidden">Форма обратной связи</h2>
+  <form class="feedback__form" id="form" action="" method="post" enctype="multipart/form-data">
+    <div class="feedback__input-group">
+      <input class="feedback__input" type="text" name="name" id="name-field" placeholder="Ваше имя" autofocus>
+      <input class="feedback__input feedback__input--phone validate[required,custom[phone]]" type="tel" name="phone"
+        id="phone-field" placeholder="Ваш телефон" required data-prompt-position="bottomLeft">
+      <label class="feedback__placeholder feedback__placeholder--phone" for="phone-field"><span>*</span></label>
+      <input class="feedback__input feedback__input--email validate[required,custom[email]]" type="email" name="email"
+        id="email-field" placeholder="Ваш email" required data-prompt-position="bottomLeft">
+      <label class="feedback__placeholder feedback__placeholder--email" for="email-field"><span>*</span></label>
+      <textarea class="feedback__message" name="message" id="message" cols="30" rows="4" placeholder="Сообщение"></textarea>
+    </div>
+    <input class="feedback__checkbox visually-hidden" type="checkbox" name="agreement" id="agreement-field">
+    <label class="feedback__label" for="agreement-field">Согласен
+      на обработку персональных <br>данных</label>
+    <label class="feedback__btn feedback__btn--affix" for="file-field">Прикрепить файл
+      <input class="feedback__upload" type="file" name="file" id="file-field">
+    </label>
+    <button class="feedback__btn feedback__btn--send" type="submit">Отправить</button>
+    <div class="feedback__footnote">
+      <small class="feedback__text">* обязательные для заполнения</small>
+      <small class="feedback__text">Макс. размер файла: 10 МБ</small>
+    </div>
+  </form>

@@ -1,64 +1,19 @@
-<body>
-  <script id="__bs_script__">//<![CDATA[document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.18.13'><\/script>".replace("HOST", location.hostname));
+---
+layout: index
+meta-title: Index
+---
+<script id="__bs_script__">//<![CDATA[document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.18.13'><\/script>".replace("HOST", location.hostname));
 //]]></script>
-
-  <div class="container">
-    <main class="container__wrapper">
-      <h1 class="visually-hidden">Отзывы и контакты</h1>
-      <section class="reviews">
-        <h2 class="reviews__title">Отзывы</h2>
-        <script id="template" type="text/x-handlebars-template">
-          {{#each updates}}
-          <li class="reviews__list-item">
-            <div class="reviews__image">
-              <img src="assets/img/{{photo}}" alt="фото {{name}}" width="81" height="81">
-            </div>
-            <h3 class="reviews__name">{{name}}</h3>
-            <a class="reviews__link" href="https://{{vklink}}" target="_blank">{{vklink}}</a>
-            <p class="reviews__text">{{reviewText}}</p>
-          </li>
-          {{/each}}
-          </script>
-        <ul class="reviews__list updates">
-        </ul>
-        <button class="reviews__arrow reviews__arrow--left"></button>
-        <button class="reviews__arrow reviews__arrow--right"></button>
-      </section>
-
-      <section class="feedback">
-        <form class="feedback__form" id="form" action="" method="post" enctype="multipart/form-data">
-          <div class="feedback__input-group">
-            <input class="feedback__input" type="text" name="name" id="name-field" placeholder="Ваше имя" autofocus>
-            <input class="feedback__input feedback__input--phone validate[required,custom[phone]]" type="tel" name="phone"
-              id="phone-field" placeholder="Ваш телефон" required data-prompt-position="bottomLeft">
-            <label class="feedback__placeholder feedback__placeholder--phone" for="phone-field"><span>*</span></label>
-            <input class="feedback__input feedback__input--email validate[required,custom[email]]" type="email" name="email"
-              id="email-field" placeholder="Ваш email" required data-prompt-position="bottomLeft">
-            <label class="feedback__placeholder feedback__placeholder--email" for="email-field"><span>*</span></label>
-            <textarea class="feedback__message" name="message" id="message" cols="30" rows="4" placeholder="Сообщение"></textarea>
-          </div>
-          <input class="feedback__checkbox visually-hidden" type="checkbox" name="agreement" id="agreement-field">
-          <label class="feedback__label" for="agreement-field">Согласен
-            на обработку персональных <br>данных</label>
-          <label class="feedback__btn feedback__btn--affix" for="file-field">Прикрепить файл
-            <input class="feedback__upload" type="file" name="file" id="file-field">
-          </label>
-          <button class="feedback__btn feedback__btn--send" type="submit">Отправить</button>
-          <div class="feedback__footnote">
-            <small class="feedback__text">* обязательные для заполнения</small>
-            <small class="feedback__text">Макс. размер файла: 10 МБ</small>
-          </div>
-        </form>
-      </section>
-    </main>
-    <footer></footer>
-  </div>
-  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script src="assets/js/handlebars.min.js"></script>
-  <script src="assets/js/app.js"></script>
-  <script src="assets/jquery/slick/slick.min.js"></script>
-  <script src="assets/jquery/validation/jquery.validationEngine-ru.js"></script>
-  <script src="assets/jquery/validation/jquery.validationEngine.js"></script>
-
-</body>
+<div class="container">
+  <main class="container__wrapper">
+    <h1 class="visually-hidden">Отзывы и контакты</h1>
+    <section class="reviews">
+      {{> reviews}}
+    </section>
+    <section class="feedback">
+      {{> form}}
+    </section>
+  </main>
+  <footer></footer>
+</div>
+{{> scripts}}
