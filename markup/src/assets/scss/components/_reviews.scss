@@ -9,6 +9,10 @@
   margin-bottom: rem-calc(79);
   box-shadow: rem-calc(10) rem-calc(10) rem-calc(30) 0 #fff1f2;
 
+  @media (min-width: $mobile-width) and (max-width: $desktop-width) {
+    width: 70%;
+  }
+
   @media (min-width: $desktop-width) {
     margin-bottom: rem-calc(168);
     width: rem-calc(873);
@@ -78,6 +82,11 @@
     @include push-center;
     @include font-set(rem-calc(14.02), rem-calc(22), 300, $black, center);
     font-style: italic;
+
+    @media (min-width: $mobile-width) and (max-width: $desktop-width) {
+      width: 100%;
+      margin: 0 auto;
+    }
 
     @media (min-width: $desktop-width) {
       width: rem-calc(235);

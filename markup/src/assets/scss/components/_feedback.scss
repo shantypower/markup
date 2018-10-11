@@ -1,5 +1,11 @@
 .feedback {
   position: relative;
+  width: 100%;
+
+  @media (min-width: $mobile-width) and (max-width: $desktop-width) {
+    width: 70%;
+    margin: 0 auto;
+  }
 
   @media (min-width: $desktop-width) {
     min-height: rem-calc(482);

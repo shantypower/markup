@@ -108,6 +108,7 @@ $print-transparent-backgrounds: true;
 
 // 2. Breakpoints
 // --------------
+$mobile-width: 481px;
 $desktop-width: 1024px;
 $breakpoints: (
   small: 0,
