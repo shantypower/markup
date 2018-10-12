@@ -20,3 +20,11 @@ body {
 html {
   font-size: $global-font-size;
 }
+
+.error {
+  @include font-set(rem-calc(14), rem-calc(21), 400 , $red, left);
+}
+
+.valid + .feedback__input--required {
+  display: none;
+}

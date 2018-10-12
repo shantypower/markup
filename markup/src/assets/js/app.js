@@ -11,12 +11,70 @@ $(document).ready(function () {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
-        //  mobileFirst: false
+          //  mobileFirst: false
         }
       }]
   });
+  /*
+    $(document).ready(function(){
+      $("#form").validationEngine('attach', { promptPosition: "centerRight", scroll: false });
+    });*/
 
-  $(document).ready(function () {
-    $("#form").validationEngine('attach', { promptPosition: "centerRight", scroll: false });
+  $.validator.addMethod('filesize', function (value, element, param) {
+    return this.optional(element) || (element.files[0].size <= param)
+  }, 'File size must be less than {0}');
+
+  jQuery.validator.setDefaults({
+    debug: true,
+    success: "valid"
   });
+
+  $("#form").validate({
+
+    rules: {
+      name: {
+        minlength: 2,
+      },
+      phone: {
+        required: true,
+        digits: true,
+        rangelength: [6, 11],
+      },
+      email: {
+        required: true,
+        email: true,
+      },
+      agreement: {
+        required: true,
+      },
+      file: {
+        required: false,
+        extension: "jpg|png",
+        filesize: 10000000,
+      }
+    },
+    messages: {
+      name: {
+        minlength: "Имя должно содержать не менее 2 символов",
+      },
+      phone: {
+        required: "Вы забыли указать номер телефона",
+        rangelength: "Число символов от 6 до 11",
+      },
+      email: {
+        required: "Вы забыли указать email",
+      },
+      agreement: {
+        required: "Необходимо принять соглашение на обработку персональных данных",
+      },
+      file: {
+        extension: "Можно загрузить только файл с расширением jpg или png и размером не более 10МБ",
+        filesize: "Макс. размер файла: 10 МБ"
+      }
+    },
+    errorContainer: $('.feedback__error-container'),
+    errorLabelContainer: $('.feedback__error-container ul'),
+    wrapper: 'li'
+  });
+
 });

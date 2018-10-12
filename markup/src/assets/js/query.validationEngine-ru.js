@@ -124,6 +124,20 @@
           // speaks by itself
           "alertTextLoad": "* Проверка, подождите..."
         },
+     /*   "validateMIME": {
+          "func": function (field, rules, i, options) {
+            //add to input tag: data-validation-engine="validate[required, custom[validateMIME[image/jpeg|image/png]]]"
+
+            var fileInput = field[0].files[0];
+            var MimeFilter = new RegExp(rules[3], 'i');
+
+            if (fileInput) {
+              return MimeFilter.test(fileInput.type);
+            } else { return true; }
+          },
+          "alertText": "* Wrong Mime Type."
+
+        },*/
         "validate2fields": {
           "alertText": "* Пожалуйста, введите HELLO"
         }
