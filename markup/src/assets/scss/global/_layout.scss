@@ -2,13 +2,29 @@
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
   position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
+  width: rem-calc(1);
+  height: rem-calc(1);
+  margin: rem-calc(-1);
   padding: 0;
   overflow: hidden;
   white-space: nowrap;
   border: 0;
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
+}
+
+body {
+  background-color: #fff3f1;
+}
+
+html {
+  font-size: $global-font-size;
+}
+
+.error {
+  @include font-set(rem-calc(14), rem-calc(21), 400 , $red, left);
+}
+
+.valid + .feedback__input--required {
+  display: none;
 }
