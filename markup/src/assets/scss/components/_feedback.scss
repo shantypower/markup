@@ -99,6 +99,7 @@
 
   &__message {
     padding-left: 0;
+    height: rem-calc(119);
 
     @include font-set(rem-calc(18), rem-calc(25), bold, $black, left);
     outline: none;
@@ -168,7 +169,7 @@
   &__label {
     order: 1;
     position: relative;
-    padding-left: rem-calc(35);
+    padding-left: rem-calc(28);
     margin-left: 0;
     margin-bottom: rem-calc(16);
     width: 100%;
@@ -182,7 +183,6 @@
     @media (min-width: $desktop-width) {
       order: 2;
       margin-bottom: rem-calc(15);
-      padding-left: rem-calc(28);
       width: 100%;
       font-size: rem-calc(18.99);
       line-height: rem-calc(23.99);
@@ -196,7 +196,7 @@
     &::before {
       @include pseudo;
       top: rem-calc(2);
-      left: 0;
+      left: rem-calc(-7);
       width: rem-calc(24);
       height: rem-calc(24);
       border: rem-calc(1) solid $black;
@@ -248,6 +248,7 @@
     &--affix {
       display: block;
       position: relative;
+      top: rem-calc(13);
       width: 100%;
       order: 2;
       padding-left: rem-calc(36);
@@ -285,7 +286,7 @@
       order: 3;
       align-self: stretch;
       padding: rem-calc(18) rem-calc(5);
-      margin-top: 0;
+      margin-top: rem-calc(13);
       margin-bottom: rem-calc(15);
       background-color: #f17f8f;
       font-size: rem-calc(17);
@@ -343,6 +344,8 @@
 }
 
 .feedback__input--phone:focus + .feedback__input--required,
-.feedback__input--email:focus + .feedback__input--required {
+.feedback__input--phone:valid + .feedback__input--required,
+.feedback__input--email:focus + .feedback__input--required,
+.feedback__input--email:valid + .feedback__input--required {
   display: none;
 }
