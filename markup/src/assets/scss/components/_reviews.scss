@@ -14,7 +14,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: rem-calc(168);
+    margin-bottom: rem-calc(163);
+    padding-bottom: rem-calc(22);
     width: rem-calc(873);
     box-shadow: rem-calc(10) rem-calc(10) rem-calc(30) 0 #fff1f2;
   }
@@ -36,11 +37,12 @@
     overflow: hidden;
 
     &-item {
-      flex-basis: rem-calc(260);
+     // flex-basis: rem-calc(260);
       flex-shrink: 0;
 
       @media (min-width: $desktop-width) {
-        width: rem-calc(248);
+        width: rem-calc(267);
+        flex-grow: 0;
       }
     }
 
@@ -107,7 +109,8 @@
     }
 
     @media (min-width: $desktop-width) {
-      padding: rem-calc(19);
+      padding: rem-calc(22);
+      padding-bottom: rem-calc(17);
     }
   }
 

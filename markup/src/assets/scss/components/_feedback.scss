@@ -9,6 +9,7 @@
 
   @media (min-width: $desktop-width) {
     min-height: rem-calc(482);
+
   }
 
   &__input {
@@ -92,7 +93,7 @@
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: flex-start;
-      margin-bottom: rem-calc(56);
+      margin-bottom: rem-calc(30);
       width: rem-calc(588);
     }
   }
@@ -125,7 +126,7 @@
 
     @media (min-width: $desktop-width) {
       width: rem-calc(262);
-      height: rem-calc(141);
+      height: rem-calc(144);
 
       &::-webkit-input-placeholder {
         padding-top: 0;
@@ -226,7 +227,7 @@
     background-color: $white;
 
     @media (min-width: $desktop-width) {
-      padding: rem-calc(47) rem-calc(68);
+      padding: rem-calc(47) rem-calc(73);
       padding-top: rem-calc(45);
       padding-bottom: rem-calc(23);
 
@@ -260,7 +261,7 @@
         margin-left: 0;
         margin-right: 0;
         margin-top: rem-calc(-84);
-        top: rem-calc(-52);
+        top: rem-calc(-51);
         left: 0;
         order: 1;
         width: rem-calc(277);

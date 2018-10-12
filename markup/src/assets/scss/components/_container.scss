@@ -6,6 +6,7 @@
   background-color: #fff3f1;
 
   &__wrapper {
+    box-sizing: border-box;
     position: relative;
     padding-top: rem-calc(65);
     padding-left: rem-calc(23);
@@ -21,6 +22,7 @@
     &__wrapper {
       padding-top: rem-calc(8);
       padding-bottom: rem-calc(118);
+      padding-left: rem-calc(10);
     }
   }
 }
