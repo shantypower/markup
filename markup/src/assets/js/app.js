@@ -37,8 +37,7 @@ $(document).ready(function () {
       },
       phone: {
         required: true,
-        digits: true,
-        rangelength: [6, 11],
+        rangelength: [6, 14],
       },
       email: {
         required: true,
@@ -59,7 +58,7 @@ $(document).ready(function () {
       },
       phone: {
         required: "Вы забыли указать номер телефона",
-        rangelength: "Число символов от 6 до 11",
+        rangelength: "Число символов от 6 до 15",
       },
       email: {
         required: "Вы забыли указать email",
