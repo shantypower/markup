@@ -4,7 +4,7 @@
   @include flex-centerer(vertical);
   @include push-center;
   width: rem-calc(230);
-  padding-top: rem-calc(51);
+  padding-top: rem-calc(48);
   padding-bottom: rem-calc(17);
   margin-bottom: rem-calc(79);
   box-shadow: rem-calc(10) rem-calc(10) rem-calc(30) 0 #fff1f2;
@@ -20,7 +20,7 @@
   }
 
   &__title {
-    padding-bottom: rem-calc(6);
+    padding-bottom: rem-calc(8);
 
     @include font-set(rem-calc(36.01), rem-calc(25.01), bold, $black, center);
 
@@ -65,7 +65,7 @@
 
   &__link {
     display: block;
-    margin-bottom: rem-calc(11);
+    margin-bottom: rem-calc(13);
 
     @include font-set(rem-calc(16.03), rem-calc(22.01), 300, $link-color, center);
 
@@ -97,6 +97,7 @@
 
   &__image {
     padding: rem-calc(20);
+    padding-bottom: rem-calc(18);
 
     img {
       display: block;
@@ -126,7 +127,7 @@
     }
 
     &--right {
-      right: rem-calc(9);
+      right: rem-calc(4);
 
       @media (min-width: $desktop-width) {
         right: rem-calc(18);
@@ -134,7 +135,7 @@
     }
 
     &--left {
-      left: rem-calc(4);
+      left: rem-calc(6);
       transform: rotate(180deg);
 
       @media (min-width: $desktop-width) {

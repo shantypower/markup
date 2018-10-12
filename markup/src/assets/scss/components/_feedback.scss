@@ -99,7 +99,7 @@
 
   &__message {
     padding-left: 0;
-    height: rem-calc(119);
+    height: rem-calc(117);
 
     @include font-set(rem-calc(18), rem-calc(25), bold, $black, left);
     outline: none;
@@ -196,11 +196,11 @@
     &::before {
       @include pseudo;
       top: rem-calc(2);
-      left: rem-calc(-7);
+      left: rem-calc(-9);
       width: rem-calc(24);
       height: rem-calc(24);
       border: rem-calc(1) solid $black;
-      border-radius: rem-calc(2);
+      border-radius: rem-calc(5);
 
       @media (min-width: $desktop-width) {
         top: 0;
@@ -210,7 +210,7 @@
 
     &::after {
       @include pseudo;
-      top: 0;
+      top: rem-calc(2);
       left: rem-calc(-8);
       width: rem-calc(24);
       height: rem-calc(24);
@@ -248,7 +248,7 @@
     &--affix {
       display: block;
       position: relative;
-      top: rem-calc(13);
+      top: rem-calc(15);
       width: 100%;
       order: 2;
       padding-left: rem-calc(36);
@@ -286,7 +286,7 @@
       order: 3;
       align-self: stretch;
       padding: rem-calc(18) rem-calc(5);
-      margin-top: rem-calc(13);
+      margin-top: rem-calc(15);
       margin-bottom: rem-calc(15);
       background-color: #f17f8f;
       font-size: rem-calc(17);
