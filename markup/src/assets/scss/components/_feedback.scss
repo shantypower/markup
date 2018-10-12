@@ -322,10 +322,10 @@
 
   &__error-container {
     display: none;
-    margin-bottom: 20px;
+    margin-bottom: rem-calc(20);
     overflow: auto;
     background-color:  #fff3f1;;
-    padding: 20px;
+    padding: rem-calc(20);
 
     p {
       @include font-set(rem-calc(14), rem-calc(21), bold, $black, center);

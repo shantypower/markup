@@ -2,9 +2,9 @@
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
   position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
+  width: rem-calc(1);
+  height: rem-calc(1);
+  margin: rem-calc(-1);
   padding: 0;
   overflow: hidden;
   white-space: nowrap;
