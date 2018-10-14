@@ -3,8 +3,8 @@ $(document).ready(function () {
     slidesToShow: 1,
     slidesToScroll: 1,
     mobileFirst: true,
-    prevArrow: ".reviews__arrow--left",
-    nextArrow: ".reviews__arrow--right",
+    prevArrow: ".reviews__arrow_left",
+    nextArrow: ".reviews__arrow_right",
     responsive: [
       {
         breakpoint: 1023,

@@ -6,23 +6,23 @@
   </div>
   <div class="feedback__input-group">
     <input class="feedback__input" type="text" name="name" id="name-field" placeholder="Ваше имя" minlength="2">
-    <input class="feedback__input feedback__input--phone " type="tel" name="phone" id="phone-field" placeholder="Ваш телефон"
+    <input class="feedback__input feedback__input_phone " type="tel" name="phone" id="phone-field" placeholder="Ваш телефон"
       title="Номер телефона в формате 8-xxx-xxx-xxxx" minlength="6" maxlength="15" required>
-    <span class="feedback__input--required">*</span>
-    <label class="feedback__placeholder feedback__placeholder--phone" for="phone-field"></label>
-    <input class="feedback__input feedback__input--email" type="email" name="email" id="email-field" placeholder="Ваш email"
+    <span class="feedback__input_required">*</span>
+    <label class="feedback__placeholder feedback__placeholder_phone" for="phone-field"></label>
+    <input class="feedback__input feedback__input_email" type="email" name="email" id="email-field" placeholder="Ваш email"
       title="Пример ввода email: someone@nowhere.com" pattern="\S+@[a-z]+.[a-z]+" required>
-    <span class="feedback__input--required">*</span>
-    <label class="feedback__placeholder feedback__placeholder--email" for="email-field"></label>
+    <span class="feedback__input_required">*</span>
+    <label class="feedback__placeholder feedback__placeholder_email" for="email-field"></label>
     <textarea class="feedback__message" name="message" id="message" placeholder="Сообщение"></textarea>
   </div>
   <input class="feedback__checkbox visually-hidden" type="checkbox" name="agreement" id="agreement-field" required>
   <label class="feedback__label" for="agreement-field">Согласен
     на обработку персональных <br>данных</label>
-  <label class="feedback__btn feedback__btn--affix" for="file-field">Прикрепить файл
+  <label class="feedback__btn feedback__btn_affix" for="file-field">Прикрепить файл
     <input class="feedback__upload visually-hidden" type="file" name="file" id="file-field">
   </label>
-  <button class="feedback__btn feedback__btn--send" type="submit">Отправить</button>
+  <button class="feedback__btn feedback__btn_send" type="submit">Отправить</button>
   <div class="feedback__footnote">
     <small class="feedback__text">* обязательные для заполнения</small>
     <small class="feedback__text">Макс. размер файла: 10 МБ</small>
