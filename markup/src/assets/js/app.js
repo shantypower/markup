@@ -37,7 +37,7 @@ $(document).ready(function () {
       },
       phone: {
         required: true,
-        rangelength: [6, 14],
+        rangelength: [6, 18],
       },
       email: {
         required: true,
@@ -58,7 +58,7 @@ $(document).ready(function () {
       },
       phone: {
         required: "Вы забыли указать номер телефона",
-        rangelength: "Число символов от 6 до 15",
+        rangelength: "Проверьте верно ли указан номер телефона",
       },
       email: {
         required: "Вы забыли указать email",
@@ -75,5 +75,7 @@ $(document).ready(function () {
     errorLabelContainer: $('.feedback__error-container ul'),
     wrapper: 'li'
   });
+
+  $('.phone_with_ddd').mask('+7 (000) 000-00-00');
 
 });
