@@ -28,3 +28,11 @@ html {
 .valid + .feedback__input_required {
   display: none;
 }
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  display: none;
+}
