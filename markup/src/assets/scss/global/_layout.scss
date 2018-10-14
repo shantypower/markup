@@ -25,6 +25,6 @@ html {
   @include font-set(rem-calc(14), rem-calc(21), 400 , $red, left);
 }
 
-.valid + .feedback__input--required {
+.valid + .feedback__input_required {
   display: none;
 }
