@@ -11,14 +11,9 @@ $(document).ready(function () {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
-          //  mobileFirst: false
         }
       }]
   });
-  /*
-    $(document).ready(function(){
-      $("#form").validationEngine('attach', { promptPosition: "centerRight", scroll: false });
-    });*/
 
   $.validator.addMethod('filesize', function (value, element, param) {
     return this.optional(element) || (element.files[0].size <= param)
