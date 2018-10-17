@@ -22,7 +22,7 @@
     border-bottom: rem-calc(1) solid $black;
     box-shadow: none;
 
-    &--required {
+    &_required {
       display: block;
       position: absolute;
       font-size: rem-calc(18);
@@ -145,7 +145,7 @@
       color: $red;
     }
 
-    &--phone {
+    &_phone {
       left: rem-calc(126);
       top: rem-calc(77);
 
@@ -155,7 +155,7 @@
       }
     }
 
-    &--email {
+    &_email {
       left: rem-calc(96);
       top: rem-calc(146);
 
@@ -245,7 +245,7 @@
     @include font-set(rem-calc(16), rem-calc(25), bold, $black, center);
     text-transform: uppercase;
 
-    &--affix {
+    &_affix {
       display: block;
       position: relative;
       top: rem-calc(15);
@@ -280,7 +280,7 @@
       }
     }
 
-    &--send {
+    &_send {
       box-sizing: border-box;
       width: 100%;
       order: 3;
@@ -343,9 +343,9 @@
   }
 }
 
-.feedback__input--phone:focus + .feedback__input--required,
-.feedback__input--phone:valid + .feedback__input--required,
-.feedback__input--email:focus + .feedback__input--required,
-.feedback__input--email:valid + .feedback__input--required {
+.feedback__input_phone:focus + .feedback__input_required,
+.feedback__input_phone:valid + .feedback__input_required,
+.feedback__input_email:focus + .feedback__input_required,
+.feedback__input_email:valid + .feedback__input_required {
   display: none;
 }
