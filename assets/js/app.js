@@ -1,78 +1,3 @@
-/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// identity function for calling harmony imports with the correct context
-/******/ 	__webpack_require__.i = function(value) { return value; };
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, {
-/******/ 				configurable: false,
-/******/ 				enumerable: true,
-/******/ 				get: getter
-/******/ 			});
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
-/******/ })
-/************************************************************************/
-/******/ ([
-/* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
 $(document).ready(function () {
   $(".reviews__list").slick({
     slidesToShow: 1,
@@ -80,22 +5,73 @@ $(document).ready(function () {
     mobileFirst: true,
     prevArrow: ".reviews__arrow_left",
     nextArrow: ".reviews__arrow_right",
-    responsive: [{
-      breakpoint: 1023,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3
-      }
-    }]
+    responsive: [
+      {
+        breakpoint: 1023,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        }
+      }]
   });
+
+
+  $.validator.addMethod('filesize', function (value, element, param) {
+    return this.optional(element) || (element.files[0].size <= param)
+  }, 'File size must be less than {0}');
+
+  jQuery.validator.setDefaults({
+    debug: true,
+    success: "valid"
+  });
+
+  $("#form").validate({
+
+    rules: {
+      name: {
+        minlength: 2,
+      },
+      phone: {
+        required: true,
+        rangelength: [6, 18],
+      },
+      email: {
+        required: true,
+        email: true,
+      },
+      agreement: {
+        required: true,
+      },
+      file: {
+        required: false,
+        extension: "jpg|png",
+        filesize: 10000000,
+      }
+    },
+    messages: {
+      name: {
+        minlength: "Имя должно содержать не менее 2 символов",
+      },
+      phone: {
+        required: "Вы забыли указать номер телефона",
+        rangelength: "Проверьте верно ли указан номер телефона",
+      },
+      email: {
+        required: "Вы забыли указать email",
+      },
+      agreement: {
+        required: "Необходимо принять соглашение на обработку персональных данных",
+      },
+      file: {
+        extension: "Можно загрузить только файл с расширением jpg или png и размером не более 10МБ",
+        filesize: "Макс. размер файла: 10 МБ"
+      }
+    },
+    errorContainer: $('.feedback__error-container'),
+    errorLabelContainer: $('.feedback__error-container ul'),
+    wrapper: 'li'
+  });
+
+  $('.phone_with_ddd').mask('+7 (000) 000-00-00');
+
 });
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(0);
-
-
-/***/ })
-/******/ ]);
